@@ -4,8 +4,9 @@
 
 	const { __, sprintf } = wp.i18n;
 	const cfg = window.youemAdmin;
+	const url = ( path ) => cfg.rest + ( cfg.rest.indexOf( '?' ) === -1 ? path : path.replace( '?', '&' ) );
 	const api = ( path, opts = {} ) =>
-		fetch( cfg.rest + path, {
+		fetch( url( path ), {
 			credentials: 'same-origin',
 			...opts,
 			headers: { 'X-WP-Nonce': cfg.nonce, ...( opts.headers || {} ) },

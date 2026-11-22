@@ -34,7 +34,8 @@
 		}
 
 		async status() {
-			const url = this.opts.rest + 'admin/upload-status?upload_id=' + encodeURIComponent( this.id );
+			const sep = this.opts.rest.indexOf( '?' ) === -1 ? '?' : '&';
+			const url = this.opts.rest + 'admin/upload-status' + sep + 'upload_id=' + encodeURIComponent( this.id );
 			const res = await fetch( url, { headers: this.headers(), credentials: 'same-origin' } );
 			if ( ! res.ok ) {
 				return [];

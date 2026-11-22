@@ -4,8 +4,12 @@
 
 	const cfg = window.youemConfig || {};
 
+	function url( path ) {
+		return cfg.rest + ( cfg.rest.indexOf( '?' ) === -1 ? path : path.replace( '?', '&' ) );
+	}
+
 	function api( path, opts = {} ) {
-		return fetch( cfg.rest + path, {
+		return fetch( url( path ), {
 			credentials: 'same-origin',
 			...opts,
 			headers: { 'X-WP-Nonce': cfg.nonce, ...( opts.headers || {} ) },
@@ -56,5 +60,5 @@
 		applyTheme( cfg.theme );
 	}
 
-	window.youem = { cfg, api, setTheme };
+	window.youem = { cfg, url, api, setTheme };
 }() );

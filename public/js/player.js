@@ -133,7 +133,7 @@
 				const img = document.createElement( 'img' );
 				img.alt = '';
 				img.loading = 'lazy';
-				img.src = window.youem.cfg.rest + 'games/' + P.gameId + '/saves/' + s.slot + '/screenshot?_wpnonce=' + window.youem.cfg.nonce + '&t=' + encodeURIComponent( s.updatedAt || '' );
+				img.src = window.youem.url( 'games/' + P.gameId + '/saves/' + s.slot + '/screenshot?_wpnonce=' + window.youem.cfg.nonce + '&t=' + encodeURIComponent( s.updatedAt || '' ) );
 				thumb.appendChild( img );
 			}
 			const info = document.createElement( 'div' );
