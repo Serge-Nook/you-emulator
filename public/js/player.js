@@ -211,6 +211,7 @@
 	window.EJS_language = P.language;
 	window.EJS_volume = P.volume;
 	window.EJS_threads = !! P.threads;
+	window.EJS_disableDatabases = true;
 	window.EJS_color = getComputedStyle( root ).getPropertyValue( '--youem-accent' ).trim() || undefined;
 	if ( P.biosUrl ) {
 		window.EJS_biosUrl = P.biosUrl;
