@@ -85,6 +85,7 @@
 		if ( capture ) {
 			stop();
 			active = capture;
+			capture.focus();
 			capture.classList.add( 'is-listening' );
 			capture.textContent = __( 'Press a key…', 'you-emulator' );
 			return;
