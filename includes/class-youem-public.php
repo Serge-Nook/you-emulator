@@ -432,7 +432,6 @@ class Youem_Public {
 			'zh' => 'zh-CN',
 			'de' => 'de-GER',
 			'es' => 'es-ES',
-			'fr' => 'fr-FR',
 			'it' => 'it-IT',
 			'ja' => 'ja-JA',
 			'ko' => 'ko-KO',

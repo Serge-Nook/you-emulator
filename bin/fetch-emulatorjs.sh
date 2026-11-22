@@ -36,7 +36,7 @@ else
 		compression/extract7z.js compression/extractzip.js compression/libunrar.js compression/libunrar.wasm; do
 		fetch "$f"
 	done
-	for l in en ru zh de es fr it ja ko pt; do
+	for l in en-US ru-RU zh-CN de-GER es-ES it-IT ja-JA ko-KO pt-BR; do
 		fetch "localization/${l}.json"
 	done
 	curl -fsSL -o "${DEST}/LICENSE" "https://raw.githubusercontent.com/EmulatorJS/EmulatorJS/v${VERSION}/LICENSE"
