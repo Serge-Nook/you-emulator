@@ -274,6 +274,13 @@ class Youem_Controls {
 						)
 					),
 					'system' => $sys(),
+					'disk'   => $g(
+						__( 'Famicom Disk System', 'you-emulator' ),
+						array(
+							10 => __( 'Swap disk side', 'you-emulator' ),
+							11 => __( 'Eject/insert disk', 'you-emulator' ),
+						)
+					),
 				);
 			case 'snes':
 				return array(

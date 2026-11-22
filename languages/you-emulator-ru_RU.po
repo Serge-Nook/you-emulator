@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: You Emulator 1.0.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/you-emulator\n"
-"POT-Creation-Date: 2026-11-22T10:53:47+00:00\n"
+"POT-Creation-Date: 2026-11-22T10:58:13+00:00\n"
 "PO-Revision-Date: 2026-11-22 12:00+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Russian\n"
@@ -11,7 +11,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Domain: you-emulator\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -130,8 +131,8 @@ msgid ""
 "Large files are sent in resumable chunks. For PS1 select the .cue together "
 "with all its .bin tracks."
 msgstr ""
-"Большие файлы отправляются частями с возможностью докачки. Для PS1 выберите "
-".cue вместе со всеми дорожками .bin."
+"Большие файлы отправляются частями с возможностью докачки. Для PS1 выберите ."
+"cue вместе со всеми дорожками .bin."
 
 #: includes/class-youem-admin.php:194
 msgid "Year"
@@ -349,8 +350,7 @@ msgstr "Кто может играть"
 #: includes/class-youem-admin.php:755
 msgid "Leave all unchecked to allow every logged-in user."
 msgstr ""
-"Оставьте всё неотмеченным, чтобы разрешить всем авторизованным "
-"пользователям."
+"Оставьте всё неотмеченным, чтобы разрешить всем авторизованным пользователям."
 
 #: includes/class-youem-admin.php:760
 msgid "Guest banner"
@@ -439,8 +439,8 @@ msgstr "Размер части при загрузке, МБ"
 #, php-format
 msgid "Server upload limit: %s. The effective chunk size is never larger."
 msgstr ""
-"Лимит загрузки на сервере: %s. Фактический размер части никогда не превышает"
-" его."
+"Лимит загрузки на сервере: %s. Фактический размер части никогда не превышает "
+"его."
 
 #: includes/class-youem-admin.php:840
 msgid "Metadata and covers"
@@ -556,8 +556,8 @@ msgstr "Горшков Сергей"
 
 #: includes/class-youem-admin.php:996
 msgid ""
-"The emulator is EmulatorJS, distributed under the GNU General Public License"
-" v3.0. Cores are libretro projects under their own licenses."
+"The emulator is EmulatorJS, distributed under the GNU General Public License "
+"v3.0. Cores are libretro projects under their own licenses."
 msgstr ""
 "Эмулятор — EmulatorJS, распространяется по лицензии GNU General Public "
 "License v3.0. Ядра — проекты libretro под собственными лицензиями."
@@ -580,8 +580,8 @@ msgstr "Добавьте игры: название, консоль, файл RO
 
 #: includes/class-youem-admin.php:1013
 msgid ""
-"Put the [youem_library] shortcode or the \"Retro game library\" block on any"
-" page."
+"Put the [youem_library] shortcode or the \"Retro game library\" block on any "
+"page."
 msgstr ""
 "Разместите шорткод [youem_library] или блок «Библиотека ретро-игр» на любой "
 "странице."
@@ -697,62 +697,74 @@ msgstr "Влево"
 msgid "Right"
 msgstr "Вправо"
 
-#: includes/class-youem-controls.php:257 includes/class-youem-controls.php:410
+#: includes/class-youem-controls.php:257 includes/class-youem-controls.php:417
 msgid "System buttons"
 msgstr "Системные кнопки"
 
-#: includes/class-youem-controls.php:268 includes/class-youem-controls.php:280
-#: includes/class-youem-controls.php:301 includes/class-youem-controls.php:317
-#: includes/class-youem-controls.php:336 includes/class-youem-controls.php:363
-#: includes/class-youem-controls.php:385
+#: includes/class-youem-controls.php:268 includes/class-youem-controls.php:287
+#: includes/class-youem-controls.php:308 includes/class-youem-controls.php:324
+#: includes/class-youem-controls.php:343 includes/class-youem-controls.php:370
+#: includes/class-youem-controls.php:392
 msgid "D-pad"
 msgstr "Крестовина"
 
-#: includes/class-youem-controls.php:270 includes/class-youem-controls.php:282
-#: includes/class-youem-controls.php:303 includes/class-youem-controls.php:319
-#: includes/class-youem-controls.php:338 includes/class-youem-controls.php:365
-#: includes/class-youem-controls.php:387
+#: includes/class-youem-controls.php:270 includes/class-youem-controls.php:289
+#: includes/class-youem-controls.php:310 includes/class-youem-controls.php:326
+#: includes/class-youem-controls.php:345 includes/class-youem-controls.php:372
+#: includes/class-youem-controls.php:394
 msgid "Buttons"
 msgstr "Кнопки"
 
-#: includes/class-youem-controls.php:291 includes/class-youem-controls.php:326
-#: includes/class-youem-controls.php:347 includes/class-youem-controls.php:374
+#: includes/class-youem-controls.php:278
+msgid "Famicom Disk System"
+msgstr "Famicom Disk System"
+
+#: includes/class-youem-controls.php:280
+msgid "Swap disk side"
+msgstr "Сменить сторону диска"
+
+#: includes/class-youem-controls.php:281
+msgid "Eject/insert disk"
+msgstr "Извлечь/вставить диск"
+
+#: includes/class-youem-controls.php:298 includes/class-youem-controls.php:333
+#: includes/class-youem-controls.php:354 includes/class-youem-controls.php:381
 msgid "Shoulder buttons"
 msgstr "Шифты"
 
-#: includes/class-youem-controls.php:340 includes/class-youem-controls.php:367
+#: includes/class-youem-controls.php:347 includes/class-youem-controls.php:374
 msgid "Cross"
 msgstr "Крест"
 
-#: includes/class-youem-controls.php:341 includes/class-youem-controls.php:368
+#: includes/class-youem-controls.php:348 includes/class-youem-controls.php:375
 msgid "Circle"
 msgstr "Круг"
 
-#: includes/class-youem-controls.php:342 includes/class-youem-controls.php:369
+#: includes/class-youem-controls.php:349 includes/class-youem-controls.php:376
 msgid "Square"
 msgstr "Квадрат"
 
-#: includes/class-youem-controls.php:343 includes/class-youem-controls.php:370
+#: includes/class-youem-controls.php:350 includes/class-youem-controls.php:377
 msgid "Triangle"
 msgstr "Треугольник"
 
-#: includes/class-youem-controls.php:358
+#: includes/class-youem-controls.php:365
 msgid "Left analog stick (DualShock)"
 msgstr "Левый аналоговый стик (DualShock)"
 
-#: includes/class-youem-controls.php:359
+#: includes/class-youem-controls.php:366
 msgid "Right analog stick (DualShock)"
 msgstr "Правый аналоговый стик (DualShock)"
 
-#: includes/class-youem-controls.php:381 includes/class-youem-controls.php:411
+#: includes/class-youem-controls.php:388 includes/class-youem-controls.php:418
 msgid "Analog stick"
 msgstr "Аналоговый стик"
 
-#: includes/class-youem-controls.php:394
+#: includes/class-youem-controls.php:401
 msgid "C buttons"
 msgstr "C-кнопки"
 
-#: includes/class-youem-controls.php:403
+#: includes/class-youem-controls.php:410
 msgid "Triggers"
 msgstr "Курки"
 
@@ -910,8 +922,7 @@ msgstr "Файл ROM отсутствует."
 
 #: includes/class-youem-public.php:492
 msgid "This system needs a BIOS. Ask the site administrator to upload it."
-msgstr ""
-"Этой системе нужен BIOS. Попросите администратора сайта загрузить его."
+msgstr "Этой системе нужен BIOS. Попросите администратора сайта загрузить его."
 
 #: includes/class-youem-public.php:503
 msgid "quick save"
@@ -991,8 +1002,8 @@ msgstr "Подождите %d секунд между сохранениями."
 #: includes/class-youem-saves.php:115
 msgid "Save storage quota exceeded. Delete old saves and try again."
 msgstr ""
-"Квота хранилища сохранений превышена. Удалите старые сохранения и попробуйте"
-" снова."
+"Квота хранилища сохранений превышена. Удалите старые сохранения и попробуйте "
+"снова."
 
 #: includes/class-youem-saves.php:125
 msgid "Could not write the save file."
@@ -1008,8 +1019,8 @@ msgstr "Ретро-игры ждут вас"
 
 #: includes/class-youem-settings.php:37
 msgid ""
-"The game library is available to registered users only. Sign up or log in to"
-" play NES, SNES, Sega Genesis, GBA, PlayStation, PSP and N64 games right in "
+"The game library is available to registered users only. Sign up or log in to "
+"play NES, SNES, Sega Genesis, GBA, PlayStation, PSP and N64 games right in "
 "your browser, with saves synced to your profile."
 msgstr ""
 "Библиотека игр доступна только зарегистрированным пользователям. "
@@ -1125,8 +1136,7 @@ msgstr "Файл .cue ссылается на отсутствующие фай�
 #. translators: %s: file extension.
 #: includes/class-youem-validator.php:50
 #, php-format
-msgid ""
-"The file does not look like a valid .%s image (signature check failed)."
+msgid "The file does not look like a valid .%s image (signature check failed)."
 msgstr ""
 "Файл не похож на корректный образ .%s (проверка сигнатуры не пройдена)."
 
@@ -1166,7 +1176,7 @@ msgstr "Сначала введите название и выберите ко�
 msgid "Found: %s. Reload the page to see new genres."
 msgstr "Найдено: %s. Перезагрузите страницу, чтобы увидеть новые жанры."
 
-#: admin/js/settings.js:89
+#: admin/js/settings.js:90
 msgid "Press a key…"
 msgstr "Нажмите клавишу…"
 

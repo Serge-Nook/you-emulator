@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: You Emulator 1.0.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/you-emulator\n"
-"POT-Creation-Date: 2026-11-22T10:53:47+00:00\n"
+"POT-Creation-Date: 2026-11-22T10:58:13+00:00\n"
 "PO-Revision-Date: 2026-11-22 12:00+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese (China)\n"
@@ -128,7 +128,8 @@ msgstr "将 ROM 文件拖到此处或点击选择"
 msgid ""
 "Large files are sent in resumable chunks. For PS1 select the .cue together "
 "with all its .bin tracks."
-msgstr "大文件会分块上传并支持断点续传。PS1 请同时选择 .cue 及其所有 .bin 音轨。"
+msgstr ""
+"大文件会分块上传并支持断点续传。PS1 请同时选择 .cue 及其所有 .bin 音轨。"
 
 #: includes/class-youem-admin.php:194
 msgid "Year"
@@ -469,7 +470,9 @@ msgstr "关闭"
 msgid ""
 "The PSP core needs SharedArrayBuffer, which browsers enable only on HTTPS "
 "pages sent with COOP/COEP headers."
-msgstr "PSP 核心需要 SharedArrayBuffer，浏览器仅在带有 COOP/COEP 头的 HTTPS 页面上启用它。"
+msgstr ""
+"PSP 核心需要 SharedArrayBuffer，浏览器仅在带有 COOP/COEP 头的 HTTPS 页面上启"
+"用它。"
 
 #: includes/class-youem-admin.php:886
 msgid "Emulator files"
@@ -514,8 +517,8 @@ msgid ""
 "Keys used twice on one console are highlighted. Shift+1/2/3 stay reserved "
 "for quick save, quick load and fullscreen."
 msgstr ""
-"点击按键框后按下按键。Esc 取消，Backspace 或 × 解除绑定。同一主机上重复的按键会高亮显示。Shift+1/2/3 "
-"保留用于快速存档、快速读档和全屏。"
+"点击按键框后按下按键。Esc 取消，Backspace 或 × 解除绑定。同一主机上重复的按键"
+"会高亮显示。Shift+1/2/3 保留用于快速存档、快速读档和全屏。"
 
 #: includes/class-youem-admin.php:987
 msgid "Retro game library for WordPress powered by EmulatorJS."
@@ -531,9 +534,11 @@ msgstr "Sergey Gorshkov"
 
 #: includes/class-youem-admin.php:996
 msgid ""
-"The emulator is EmulatorJS, distributed under the GNU General Public License"
-" v3.0. Cores are libretro projects under their own licenses."
-msgstr "模拟器为 EmulatorJS，依据 GNU 通用公共许可证 v3.0 发布。核心为 libretro 项目，各自遵循其许可证。"
+"The emulator is EmulatorJS, distributed under the GNU General Public License "
+"v3.0. Cores are libretro projects under their own licenses."
+msgstr ""
+"模拟器为 EmulatorJS，依据 GNU 通用公共许可证 v3.0 发布。核心为 libretro 项"
+"目，各自遵循其许可证。"
 
 #: includes/class-youem-admin.php:1000
 msgid "Bundled"
@@ -553,8 +558,8 @@ msgstr "添加游戏：名称、主机、ROM 文件、封面、类型和访问�
 
 #: includes/class-youem-admin.php:1013
 msgid ""
-"Put the [youem_library] shortcode or the \"Retro game library\" block on any"
-" page."
+"Put the [youem_library] shortcode or the \"Retro game library\" block on any "
+"page."
 msgstr "在任意页面放置 [youem_library] 短代码或“复古游戏库”区块。"
 
 #: includes/class-youem-admin.php:1016
@@ -667,62 +672,74 @@ msgstr "左"
 msgid "Right"
 msgstr "右"
 
-#: includes/class-youem-controls.php:257 includes/class-youem-controls.php:410
+#: includes/class-youem-controls.php:257 includes/class-youem-controls.php:417
 msgid "System buttons"
 msgstr "系统按键"
 
-#: includes/class-youem-controls.php:268 includes/class-youem-controls.php:280
-#: includes/class-youem-controls.php:301 includes/class-youem-controls.php:317
-#: includes/class-youem-controls.php:336 includes/class-youem-controls.php:363
-#: includes/class-youem-controls.php:385
+#: includes/class-youem-controls.php:268 includes/class-youem-controls.php:287
+#: includes/class-youem-controls.php:308 includes/class-youem-controls.php:324
+#: includes/class-youem-controls.php:343 includes/class-youem-controls.php:370
+#: includes/class-youem-controls.php:392
 msgid "D-pad"
 msgstr "十字键"
 
-#: includes/class-youem-controls.php:270 includes/class-youem-controls.php:282
-#: includes/class-youem-controls.php:303 includes/class-youem-controls.php:319
-#: includes/class-youem-controls.php:338 includes/class-youem-controls.php:365
-#: includes/class-youem-controls.php:387
+#: includes/class-youem-controls.php:270 includes/class-youem-controls.php:289
+#: includes/class-youem-controls.php:310 includes/class-youem-controls.php:326
+#: includes/class-youem-controls.php:345 includes/class-youem-controls.php:372
+#: includes/class-youem-controls.php:394
 msgid "Buttons"
 msgstr "按键"
 
-#: includes/class-youem-controls.php:291 includes/class-youem-controls.php:326
-#: includes/class-youem-controls.php:347 includes/class-youem-controls.php:374
+#: includes/class-youem-controls.php:278
+msgid "Famicom Disk System"
+msgstr "Famicom 磁碟机"
+
+#: includes/class-youem-controls.php:280
+msgid "Swap disk side"
+msgstr "切换磁盘面"
+
+#: includes/class-youem-controls.php:281
+msgid "Eject/insert disk"
+msgstr "弹出/插入磁盘"
+
+#: includes/class-youem-controls.php:298 includes/class-youem-controls.php:333
+#: includes/class-youem-controls.php:354 includes/class-youem-controls.php:381
 msgid "Shoulder buttons"
 msgstr "肩键"
 
-#: includes/class-youem-controls.php:340 includes/class-youem-controls.php:367
+#: includes/class-youem-controls.php:347 includes/class-youem-controls.php:374
 msgid "Cross"
 msgstr "叉"
 
-#: includes/class-youem-controls.php:341 includes/class-youem-controls.php:368
+#: includes/class-youem-controls.php:348 includes/class-youem-controls.php:375
 msgid "Circle"
 msgstr "圆"
 
-#: includes/class-youem-controls.php:342 includes/class-youem-controls.php:369
+#: includes/class-youem-controls.php:349 includes/class-youem-controls.php:376
 msgid "Square"
 msgstr "方"
 
-#: includes/class-youem-controls.php:343 includes/class-youem-controls.php:370
+#: includes/class-youem-controls.php:350 includes/class-youem-controls.php:377
 msgid "Triangle"
 msgstr "三角"
 
-#: includes/class-youem-controls.php:358
+#: includes/class-youem-controls.php:365
 msgid "Left analog stick (DualShock)"
 msgstr "左模拟摇杆 (DualShock)"
 
-#: includes/class-youem-controls.php:359
+#: includes/class-youem-controls.php:366
 msgid "Right analog stick (DualShock)"
 msgstr "右模拟摇杆 (DualShock)"
 
-#: includes/class-youem-controls.php:381 includes/class-youem-controls.php:411
+#: includes/class-youem-controls.php:388 includes/class-youem-controls.php:418
 msgid "Analog stick"
 msgstr "模拟摇杆"
 
-#: includes/class-youem-controls.php:394
+#: includes/class-youem-controls.php:401
 msgid "C buttons"
 msgstr "C 键"
 
-#: includes/class-youem-controls.php:403
+#: includes/class-youem-controls.php:410
 msgid "Triggers"
 msgstr "扳机键"
 
@@ -972,12 +989,12 @@ msgstr "复古游戏等你来玩"
 
 #: includes/class-youem-settings.php:37
 msgid ""
-"The game library is available to registered users only. Sign up or log in to"
-" play NES, SNES, Sega Genesis, GBA, PlayStation, PSP and N64 games right in "
+"The game library is available to registered users only. Sign up or log in to "
+"play NES, SNES, Sega Genesis, GBA, PlayStation, PSP and N64 games right in "
 "your browser, with saves synced to your profile."
 msgstr ""
-"游戏库仅对注册用户开放。注册或登录即可在浏览器中直接畅玩 NES、SNES、世嘉 Genesis、GBA、PlayStation、PSP 和 N64 "
-"游戏，存档同步到您的个人资料。"
+"游戏库仅对注册用户开放。注册或登录即可在浏览器中直接畅玩 NES、SNES、世嘉 "
+"Genesis、GBA、PlayStation、PSP 和 N64 游戏，存档同步到您的个人资料。"
 
 #: includes/class-youem-settings.php:37
 msgid "Get access"
@@ -1086,8 +1103,7 @@ msgstr "cue 文件引用了缺失的文件：%s"
 #. translators: %s: file extension.
 #: includes/class-youem-validator.php:50
 #, php-format
-msgid ""
-"The file does not look like a valid .%s image (signature check failed)."
+msgid "The file does not look like a valid .%s image (signature check failed)."
 msgstr "该文件看起来不是有效的 .%s 镜像（签名检查失败）。"
 
 #. translators: %s: extensions.
@@ -1126,7 +1142,7 @@ msgstr "请先输入名称并选择主机。"
 msgid "Found: %s. Reload the page to see new genres."
 msgstr "已找到：%s。重新加载页面以查看新类型。"
 
-#: admin/js/settings.js:89
+#: admin/js/settings.js:90
 msgid "Press a key…"
 msgstr "请按键…"
 

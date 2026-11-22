@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-22T10:53:47+00:00\n"
+"POT-Creation-Date: 2026-11-22T10:58:13+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: you-emulator\n"
@@ -669,75 +669,87 @@ msgid "Right"
 msgstr ""
 
 #: includes/class-youem-controls.php:257
-#: includes/class-youem-controls.php:410
+#: includes/class-youem-controls.php:417
 msgid "System buttons"
 msgstr ""
 
 #: includes/class-youem-controls.php:268
-#: includes/class-youem-controls.php:280
-#: includes/class-youem-controls.php:301
-#: includes/class-youem-controls.php:317
-#: includes/class-youem-controls.php:336
-#: includes/class-youem-controls.php:363
-#: includes/class-youem-controls.php:385
+#: includes/class-youem-controls.php:287
+#: includes/class-youem-controls.php:308
+#: includes/class-youem-controls.php:324
+#: includes/class-youem-controls.php:343
+#: includes/class-youem-controls.php:370
+#: includes/class-youem-controls.php:392
 msgid "D-pad"
 msgstr ""
 
 #: includes/class-youem-controls.php:270
-#: includes/class-youem-controls.php:282
-#: includes/class-youem-controls.php:303
-#: includes/class-youem-controls.php:319
-#: includes/class-youem-controls.php:338
-#: includes/class-youem-controls.php:365
-#: includes/class-youem-controls.php:387
+#: includes/class-youem-controls.php:289
+#: includes/class-youem-controls.php:310
+#: includes/class-youem-controls.php:326
+#: includes/class-youem-controls.php:345
+#: includes/class-youem-controls.php:372
+#: includes/class-youem-controls.php:394
 msgid "Buttons"
 msgstr ""
 
-#: includes/class-youem-controls.php:291
-#: includes/class-youem-controls.php:326
-#: includes/class-youem-controls.php:347
-#: includes/class-youem-controls.php:374
+#: includes/class-youem-controls.php:278
+msgid "Famicom Disk System"
+msgstr ""
+
+#: includes/class-youem-controls.php:280
+msgid "Swap disk side"
+msgstr ""
+
+#: includes/class-youem-controls.php:281
+msgid "Eject/insert disk"
+msgstr ""
+
+#: includes/class-youem-controls.php:298
+#: includes/class-youem-controls.php:333
+#: includes/class-youem-controls.php:354
+#: includes/class-youem-controls.php:381
 msgid "Shoulder buttons"
 msgstr ""
 
-#: includes/class-youem-controls.php:340
-#: includes/class-youem-controls.php:367
+#: includes/class-youem-controls.php:347
+#: includes/class-youem-controls.php:374
 msgid "Cross"
 msgstr ""
 
-#: includes/class-youem-controls.php:341
-#: includes/class-youem-controls.php:368
+#: includes/class-youem-controls.php:348
+#: includes/class-youem-controls.php:375
 msgid "Circle"
 msgstr ""
 
-#: includes/class-youem-controls.php:342
-#: includes/class-youem-controls.php:369
+#: includes/class-youem-controls.php:349
+#: includes/class-youem-controls.php:376
 msgid "Square"
 msgstr ""
 
-#: includes/class-youem-controls.php:343
-#: includes/class-youem-controls.php:370
+#: includes/class-youem-controls.php:350
+#: includes/class-youem-controls.php:377
 msgid "Triangle"
 msgstr ""
 
-#: includes/class-youem-controls.php:358
+#: includes/class-youem-controls.php:365
 msgid "Left analog stick (DualShock)"
 msgstr ""
 
-#: includes/class-youem-controls.php:359
+#: includes/class-youem-controls.php:366
 msgid "Right analog stick (DualShock)"
 msgstr ""
 
-#: includes/class-youem-controls.php:381
-#: includes/class-youem-controls.php:411
+#: includes/class-youem-controls.php:388
+#: includes/class-youem-controls.php:418
 msgid "Analog stick"
 msgstr ""
 
-#: includes/class-youem-controls.php:394
+#: includes/class-youem-controls.php:401
 msgid "C buttons"
 msgstr ""
 
-#: includes/class-youem-controls.php:403
+#: includes/class-youem-controls.php:410
 msgid "Triggers"
 msgstr ""
 
@@ -1153,7 +1165,7 @@ msgstr ""
 msgid "Found: %s. Reload the page to see new genres."
 msgstr ""
 
-#: admin/js/settings.js:89
+#: admin/js/settings.js:90
 msgid "Press a key…"
 msgstr ""
 

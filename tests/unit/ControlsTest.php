@@ -34,7 +34,7 @@ class ControlsTest extends TestCase {
 			}
 			return $out;
 		};
-		$this->assertSame( array( 4, 5, 6, 7, 8, 0, 2, 3 ), Youem_Controls::ids( 'nes' ) );
+		$this->assertSame( array( 4, 5, 6, 7, 8, 0, 2, 3, 10, 11 ), Youem_Controls::ids( 'nes' ) );
 		$this->assertContains( 'Mode', $labels( 'segaMD' ) );
 		$this->assertContains( 'C ↑', $labels( 'n64' ) );
 		$this->assertContains( 'L2', $labels( 'psx' ) );
