@@ -49,6 +49,10 @@ class Youem_Controls {
 	 * Gamepad defaults that follow the button positions of the original controller.
 	 */
 	private const PAD_OVERRIDES = array(
+		'nes'    => array(
+			10 => 'LEFT_BOTTOM_SHOULDER',
+			11 => 'RIGHT_BOTTOM_SHOULDER',
+		),
 		'segaMD' => array(
 			1 => 'BUTTON_3',
 			0 => 'BUTTON_1',
