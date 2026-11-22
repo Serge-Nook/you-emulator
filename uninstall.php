@@ -1,6 +1,6 @@
 <?php
 /**
- * Uninstall: removes the table, options, user meta and (optionally) stored files.
+ * Uninstall: removes options and user meta; with purge enabled also games, saves and stored files.
  *
  * @package YouEmulator
  */
@@ -11,9 +11,7 @@ global $wpdb;
 
 $youem_settings = get_option( 'youem_settings', array() );
 
-$wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}youem_saves" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.DirectDatabaseQuery.SchemaChange
 delete_option( 'youem_settings' );
-delete_option( 'youem_db_version' );
 delete_metadata( 'user', 0, 'youem_theme', '', true );
 wp_clear_scheduled_hook( 'youem_daily_cleanup' );
 
@@ -23,6 +21,8 @@ foreach ( wp_roles()->role_objects as $youem_role ) {
 }
 
 if ( is_array( $youem_settings ) && ! empty( $youem_settings['uninstall_purge'] ) ) {
+	$wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}youem_saves" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.DirectDatabaseQuery.SchemaChange
+	delete_option( 'youem_db_version' );
 	$youem_games = get_posts(
 		array(
 			'post_type'   => 'youem_game',
