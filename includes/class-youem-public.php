@@ -43,7 +43,11 @@ class Youem_Public {
 			return;
 		}
 		$types = (array) $query->get( 'post_type' );
-		if ( ! in_array( Youem_Game::POST_TYPE, $types, true ) && ! in_array( 'any', $types, true ) ) {
+		if ( ! in_array( Youem_Game::POST_TYPE, $types, true ) ) {
+			return;
+		}
+		if ( count( $types ) > 1 ) {
+			$query->set( 'post_type', array_values( array_diff( $types, array( Youem_Game::POST_TYPE ) ) ) );
 			return;
 		}
 		foreach ( Youem_Access::query_args( get_current_user_id() ) as $key => $value ) {
