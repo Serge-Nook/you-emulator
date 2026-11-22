@@ -30,6 +30,25 @@ class Youem_Public {
 		add_action( 'template_redirect', array( __CLASS__, 'template_redirect' ), 1 );
 		add_filter( 'the_content', array( __CLASS__, 'game_content' ), 20 );
 		add_filter( 'template_include', array( __CLASS__, 'embed_template' ) );
+		add_action( 'pre_get_posts', array( __CLASS__, 'restrict_queries' ) );
+	}
+
+	/**
+	 * Applies game access rules to front-end listings and feeds of games.
+	 *
+	 * @param WP_Query $query Query.
+	 */
+	public static function restrict_queries( WP_Query $query ): void {
+		if ( is_admin() || $query->is_singular() || ( ! $query->is_main_query() && ! $query->is_feed() ) ) {
+			return;
+		}
+		$types = (array) $query->get( 'post_type' );
+		if ( ! in_array( Youem_Game::POST_TYPE, $types, true ) && ! in_array( 'any', $types, true ) ) {
+			return;
+		}
+		foreach ( Youem_Access::query_args( get_current_user_id() ) as $key => $value ) {
+			$query->set( $key, $value );
+		}
 	}
 
 	/**
@@ -191,13 +210,14 @@ class Youem_Public {
 		wp_enqueue_style( 'youem-library' );
 		wp_enqueue_script( 'youem-library' );
 
-		$counts  = self::console_counts();
-		$genres  = get_terms(
+		$ids     = self::accessible_ids();
+		$counts  = self::console_counts( $ids );
+		$genres  = $ids ? get_terms(
 			array(
 				'taxonomy'   => Youem_Game::TAX_GENRE,
-				'hide_empty' => true,
+				'object_ids' => $ids,
 			)
-		);
+		) : array();
 		$data    = array(
 			'console'    => self::console_code( (string) $atts['console'] ),
 			'genre'      => sanitize_title( (string) $atts['genre'] ),
@@ -279,13 +299,12 @@ class Youem_Public {
 	}
 
 	/**
-	 * Number of accessible games per console.
+	 * IDs of the games the current user can play.
 	 *
-	 * @return array<string, int>
+	 * @return int[]
 	 */
-	private static function console_counts(): array {
-		$counts = array();
-		$args   = array_merge(
+	private static function accessible_ids(): array {
+		$args = array_merge(
 			Youem_Access::query_args( get_current_user_id() ),
 			array(
 				'posts_per_page' => -1,
@@ -293,8 +312,19 @@ class Youem_Public {
 				'no_found_rows'  => true,
 			)
 		);
-		foreach ( ( new WP_Query( $args ) )->posts as $id ) {
-			$c = Youem_Game::console( (int) $id );
+		return array_values( array_filter( array_map( 'intval', ( new WP_Query( $args ) )->posts ) ) );
+	}
+
+	/**
+	 * Number of games per console.
+	 *
+	 * @param int[] $ids Game IDs.
+	 * @return array<string, int>
+	 */
+	private static function console_counts( array $ids ): array {
+		$counts = array();
+		foreach ( $ids as $id ) {
+			$c = Youem_Game::console( $id );
 			if ( '' !== $c ) {
 				$counts[ $c ] = ( $counts[ $c ] ?? 0 ) + 1;
 			}
