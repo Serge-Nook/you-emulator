@@ -1,0 +1,19 @@
+.youem-theme-gameboy .youem, .youem.youem-theme-gameboy, .youem-theme-gameboy.youem-embed {
+	--youem-bg: #9bbc0f; --youem-surface: #8bac0f; --youem-surface-2: #7a9a0c; --youem-text: #0f380f; --youem-muted: #306230;
+	--youem-accent: #0f380f; --youem-accent-2: #306230; --youem-on-accent: #9bbc0f; --youem-border: #306230;
+	--youem-shadow: 4px 4px 0 #0f380f; --youem-glow: 0 0 0 2px #0f380f; --youem-radius: 0;
+	--youem-font: "Press Start 2P", "Courier New", ui-monospace, monospace; --youem-title-font: var(--youem-font);
+}
+.youem-theme-gameboy .youem-library, .youem.youem-theme-gameboy.youem-guest {
+	background: radial-gradient(rgba(15, 56, 15, .12) 1px, transparent 1px) 0 0 / 4px 4px, var(--youem-bg);
+	image-rendering: pixelated;
+}
+.youem-theme-gameboy .youem-card { border: 2px solid var(--youem-text); box-shadow: var(--youem-shadow); }
+.youem-theme-gameboy .youem-card:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 #0f380f; }
+.youem-theme-gameboy .youem-card__cover img { filter: grayscale(1) sepia(1) hue-rotate(40deg) saturate(2.4) brightness(.8) contrast(1.3); image-rendering: pixelated; }
+.youem-theme-gameboy .youem-card:hover .youem-card__cover img { filter: none; }
+.youem-theme-gameboy .youem-card__title, .youem-theme-gameboy .youem-tab { font-size: 11px; line-height: 1.6; }
+.youem-theme-gameboy .youem-guest__title, .youem.youem-theme-gameboy .youem-guest__title { animation: youem-gb-blink 1.2s steps(2, start) infinite; }
+.youem-theme-gameboy .youem-stage { border: 10px solid #8b8c94; border-radius: 8px 8px 40px 8px; box-shadow: inset 0 0 0 2px #0f380f; }
+@keyframes youem-gb-blink { 50% { text-shadow: 2px 2px 0 #306230; } }
+@media (prefers-reduced-motion: reduce) { .youem-theme-gameboy .youem *, .youem.youem-theme-gameboy * { animation: none !important; } .youem-theme-gameboy .youem-card:hover { transform: none; } }

@@ -1,0 +1,19 @@
+.youem-theme-aqua .youem, .youem.youem-theme-aqua, .youem-theme-aqua.youem-embed {
+	--youem-bg: #e6f3ff; --youem-surface: rgba(255, 255, 255, .72); --youem-surface-2: #d3e8fb; --youem-text: #0b2a4a; --youem-muted: #4d6b8a;
+	--youem-accent: #0a84ff; --youem-accent-2: #00c2a8; --youem-on-accent: #ffffff; --youem-border: rgba(10, 132, 255, .22);
+	--youem-shadow: 0 8px 24px rgba(10, 80, 160, .15); --youem-glow: 0 0 0 3px rgba(10, 132, 255, .35); --youem-radius: 18px;
+	--youem-title-font: "Nunito", "Segoe UI", system-ui, sans-serif;
+}
+.youem-theme-aqua .youem-library, .youem.youem-theme-aqua.youem-guest {
+	background: radial-gradient(800px 400px at 0 0, rgba(0, 194, 168, .22), transparent 60%), radial-gradient(900px 500px at 100% 100%, rgba(10, 132, 255, .25), transparent 60%), linear-gradient(180deg, #f4faff, var(--youem-bg));
+	background-size: 140% 140%; animation: youem-aqua-drift 18s ease-in-out infinite alternate;
+}
+.youem-theme-aqua .youem-card { backdrop-filter: blur(10px) saturate(1.4); border: 1px solid rgba(255, 255, 255, .8); }
+.youem-theme-aqua .youem-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(10, 80, 160, .22); }
+.youem-theme-aqua .youem-tab[aria-selected="true"], .youem-theme-aqua .youem-card__play {
+	background: linear-gradient(180deg, #6cc4ff 0%, #0a84ff 50%, #0670db 51%, #3ea6ff 100%); color: #fff; box-shadow: inset 0 1px 0 rgba(255, 255, 255, .7);
+}
+.youem-theme-aqua .youem-guest__title, .youem.youem-theme-aqua .youem-guest__title { color: #0670db; text-shadow: 0 1px 0 #fff; }
+.youem-theme-aqua .youem-stage { box-shadow: 0 20px 50px rgba(10, 80, 160, .25); }
+@keyframes youem-aqua-drift { to { background-position: 100% 100%; } }
+@media (prefers-reduced-motion: reduce) { .youem-theme-aqua .youem-library, .youem.youem-theme-aqua.youem-guest, .youem-theme-aqua .youem * { animation: none !important; } .youem-theme-aqua .youem-card:hover { transform: none; } }

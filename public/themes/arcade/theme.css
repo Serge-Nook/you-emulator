@@ -1,0 +1,20 @@
+.youem-theme-arcade .youem, .youem.youem-theme-arcade, .youem-theme-arcade.youem-embed {
+	--youem-bg: #050505; --youem-surface: #121212; --youem-surface-2: #1e1e1e; --youem-text: #fff8e1; --youem-muted: #b8b0a0;
+	--youem-accent: #ffd400; --youem-accent-2: #ff2d2d; --youem-on-accent: #050505; --youem-border: rgba(255, 212, 0, .35);
+	--youem-glow: 0 0 0 2px #ff2d2d; --youem-radius: 6px;
+	--youem-title-font: "Bungee", "Impact", "Arial Black", sans-serif;
+}
+.youem-theme-arcade .youem-library, .youem.youem-theme-arcade.youem-guest {
+	background: radial-gradient(circle at 50% 0, rgba(255, 212, 0, .14), transparent 55%), repeating-conic-gradient(#0b0b0b 0 25%, #050505 0 50%) 0 0 / 28px 28px;
+	border-top: 6px solid; border-image: repeating-linear-gradient(90deg, #ffd400 0 20px, #050505 20px 40px) 6;
+}
+.youem-theme-arcade .youem-guest__title, .youem.youem-theme-arcade .youem-guest__title {
+	color: var(--youem-accent); text-shadow: 3px 3px 0 #ff2d2d, 6px 6px 0 rgba(255, 45, 45, .35); letter-spacing: .04em;
+}
+.youem-theme-arcade .youem-tab[aria-selected="true"] { animation: youem-arcade-marquee 1s steps(2) infinite; }
+.youem-theme-arcade .youem-card { border: 2px solid var(--youem-surface-2); }
+.youem-theme-arcade .youem-card:hover { border-color: var(--youem-accent); box-shadow: 0 0 0 2px var(--youem-accent-2), 0 0 24px rgba(255, 212, 0, .35); }
+.youem-theme-arcade .youem-card__play { background: var(--youem-accent-2); color: #fff; }
+.youem-theme-arcade .youem-stage { border: 3px solid var(--youem-accent); box-shadow: 0 0 0 6px #050505, 0 0 0 9px var(--youem-accent-2); }
+@keyframes youem-arcade-marquee { 50% { background: var(--youem-accent-2); color: #fff; } }
+@media (prefers-reduced-motion: reduce) { .youem-theme-arcade .youem * { animation: none !important; } }

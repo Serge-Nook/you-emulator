@@ -43,3 +43,14 @@ body.youem-embed .youem-game { margin: 0; }
 body.youem-embed .youem-stage { border-radius: 0; border: 0; }
 body.youem-embed .youem-screen { max-height: calc(100vh - 60px); }
 @media (max-width: 600px) { .youem-hint__pad { display: none; } }
+.youem-controls-help { margin: 12px 0; border: 1px solid var(--youem-border); border-radius: var(--youem-radius, 10px); background: var(--youem-surface); }
+.youem-controls-help > summary { cursor: pointer; padding: 10px 14px; font-weight: 600; color: var(--youem-text); }
+.youem-controls-help > summary:focus-visible { outline: 2px solid var(--youem-accent); outline-offset: 2px; }
+.youem-controls-help__groups { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px 20px; padding: 4px 14px 14px; }
+.youem-controls-help__group { margin: 0; }
+.youem-controls-help__title { margin: 0 0 6px; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--youem-muted); }
+.youem-controls-help__group dd { display: flex; justify-content: space-between; gap: 8px; margin: 0 0 4px; font-size: 13px; color: var(--youem-text); }
+.youem-controls-help__btn { font-weight: 600; }
+.youem-controls-help__keys { display: inline-flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px; color: var(--youem-muted); }
+.youem-controls-help kbd { padding: 1px 6px; border-radius: 4px; background: var(--youem-surface-2); color: var(--youem-text); border: 1px solid var(--youem-border); font: 12px ui-monospace, monospace; }
+.youem-controls-help__pad { font-size: 12px; }

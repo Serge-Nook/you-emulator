@@ -1,0 +1,27 @@
+.youem-theme-synthwave .youem, .youem.youem-theme-synthwave, .youem-theme-synthwave.youem-embed {
+	--youem-bg: #1a0b2e; --youem-surface: #261447; --youem-surface-2: #33195c; --youem-text: #fbe9ff; --youem-muted: #c7a4e8;
+	--youem-accent: #ff6ad5; --youem-accent-2: #ffb86b; --youem-on-accent: #1a0b2e; --youem-border: rgba(255, 106, 213, .3);
+	--youem-glow: 0 0 14px rgba(255, 106, 213, .55); --youem-radius: 10px;
+	--youem-title-font: "Monoton", "Orbitron", "Segoe UI", system-ui, sans-serif;
+}
+.youem-theme-synthwave .youem-library, .youem.youem-theme-synthwave.youem-guest {
+	position: relative; overflow: hidden;
+	background: linear-gradient(180deg, #1a0b2e 0%, #2b0f45 45%, #5a1a5e 72%, #ff6ad5 100%);
+}
+.youem-theme-synthwave .youem-library::before, .youem.youem-theme-synthwave.youem-guest::before {
+	content: ""; position: absolute; left: -50%; right: -50%; bottom: 0; height: 45%; pointer-events: none; z-index: 0;
+	background: repeating-linear-gradient(90deg, rgba(255, 184, 107, .35) 0 2px, transparent 2px 60px), repeating-linear-gradient(0deg, rgba(255, 184, 107, .35) 0 2px, transparent 2px 40px);
+	transform: perspective(300px) rotateX(60deg); transform-origin: bottom; animation: youem-synth-grid 4s linear infinite;
+	mask-image: linear-gradient(transparent, #000 70%);
+}
+.youem-theme-synthwave .youem-library > *, .youem.youem-theme-synthwave.youem-guest > * { position: relative; z-index: 1; }
+.youem-theme-synthwave .youem-guest__title, .youem.youem-theme-synthwave .youem-guest__title {
+	background: linear-gradient(180deg, #ffe66d, #ff6ad5 60%, #8a2be2); -webkit-background-clip: text; background-clip: text; color: transparent;
+	filter: drop-shadow(0 0 10px rgba(255, 106, 213, .6));
+}
+.youem-theme-synthwave .youem-card { background: rgba(38, 20, 71, .85); backdrop-filter: blur(4px); }
+.youem-theme-synthwave .youem-card:hover { border-color: var(--youem-accent-2); box-shadow: 0 0 22px rgba(255, 184, 107, .45); }
+.youem-theme-synthwave .youem-tab[aria-selected="true"] { background: linear-gradient(90deg, #ff6ad5, #ffb86b); color: var(--youem-on-accent); }
+.youem-theme-synthwave .youem-stage { box-shadow: 0 0 0 1px var(--youem-accent), 0 12px 40px rgba(255, 106, 213, .35); }
+@keyframes youem-synth-grid { to { background-position: 0 40px, 0 40px; } }
+@media (prefers-reduced-motion: reduce) { .youem-theme-synthwave .youem-library::before, .youem.youem-theme-synthwave.youem-guest::before, .youem-theme-synthwave .youem * { animation: none !important; } }

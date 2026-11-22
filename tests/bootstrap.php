@@ -77,6 +77,6 @@ if ( ! class_exists( 'WP_Post' ) ) {
 	}
 }
 
-foreach ( array( 'consoles', 'game', 'storage', 'zip', 'validator', 'settings', 'access', 'stream', 'upload' ) as $youem_class ) {
+foreach ( array( 'consoles', 'game', 'storage', 'zip', 'validator', 'settings', 'controls', 'access', 'stream', 'upload' ) as $youem_class ) {
 	require_once YOUEM_DIR . 'includes/class-youem-' . $youem_class . '.php';
 }

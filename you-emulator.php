@@ -3,7 +3,7 @@
  * Plugin Name:       You Emulator
  * Plugin URI:        https://github.com/Serge-Nook/you-emulator
  * Description:       Retro game library for WordPress powered by EmulatorJS: NES, SNES, Sega Genesis, GBA, PlayStation, PSP and N64 right in the browser, with server-side save states, hotkeys and gamepad combos.
- * Version:           1.0.2
+ * Version:           1.0.3
  * Requires at least: 6.5
  * Requires PHP:      8.1
  * Author:            Горшков Сергей Владимирович
@@ -18,7 +18,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'YOUEM_VERSION', '1.0.2' );
+define( 'YOUEM_VERSION', '1.0.3' );
 define( 'YOUEM_DB_VERSION', '1' );
 define( 'YOUEM_EJS_VERSION', '4.2.3' );
 define( 'YOUEM_FILE', __FILE__ );
@@ -30,6 +30,7 @@ require_once YOUEM_DIR . 'includes/class-youem-storage.php';
 require_once YOUEM_DIR . 'includes/class-youem-zip.php';
 require_once YOUEM_DIR . 'includes/class-youem-validator.php';
 require_once YOUEM_DIR . 'includes/class-youem-settings.php';
+require_once YOUEM_DIR . 'includes/class-youem-controls.php';
 require_once YOUEM_DIR . 'includes/class-youem-game.php';
 require_once YOUEM_DIR . 'includes/class-youem-access.php';
 require_once YOUEM_DIR . 'includes/class-youem-saves.php';

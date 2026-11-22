@@ -195,6 +195,19 @@
 		}
 	} );
 
+	// The administrator's layout wins over bindings EmulatorJS restored from localStorage.
+	const applyControls = () => {
+		const emu = window.EJS_emulator;
+		if ( ! P.controls || ! emu || typeof emu.setupKeys !== 'function' ) {
+			return;
+		}
+		emu.controls = JSON.parse( JSON.stringify( P.controls ) );
+		emu.setupKeys();
+		if ( typeof emu.checkGamepadInputs === 'function' ) {
+			emu.checkGamepadInputs();
+		}
+	};
+
 	const actions = { save: () => save( 0 ), load: () => load( 0 ), fullscreen };
 	window.YouemHotkeys.attach( actions );
 	window.YouemGamepad.attach( P.combos, actions );
@@ -217,9 +230,13 @@
 		window.EJS_biosUrl = P.biosUrl;
 	}
 	window.EJS_defaultOptions = { shader: P.shader };
-	window.EJS_Buttons = { fullscreen: false, exitEmulation: false };
+	window.EJS_Buttons = { fullscreen: false, exitEmulation: false, gamepad: false };
+	if ( P.controls ) {
+		window.EJS_defaultControls = P.controls;
+	}
 	window.EJS_onGameStart = () => {
 		started = true;
+		applyControls();
 		root.classList.add( 'is-running' );
 	};
 	window.EJS_onSaveState = () => save( 0 );

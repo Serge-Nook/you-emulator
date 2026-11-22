@@ -37,6 +37,11 @@ class Youem_Themes {
 			'retro-cream' => __( 'Retro cream', 'you-emulator' ),
 			'dark'        => __( 'Dark', 'you-emulator' ),
 			'crt'         => 'CRT',
+			'synthwave'   => __( 'Synthwave', 'you-emulator' ),
+			'gameboy'     => __( 'Game Boy', 'you-emulator' ),
+			'arcade'      => __( 'Arcade', 'you-emulator' ),
+			'aqua'        => __( 'Aqua', 'you-emulator' ),
+			'sakura'      => __( 'Sakura', 'you-emulator' ),
 		);
 		foreach ( $names as $slug => $name ) {
 			$themes[ $slug ] = array(

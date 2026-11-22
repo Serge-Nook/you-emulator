@@ -455,6 +455,7 @@ class Youem_Public {
 			'shader'     => $s['shader'],
 			'volume'     => (float) $s['volume'],
 			'combos'     => $s['combos'],
+			'controls'   => Youem_Controls::ejs( $console ),
 			'slots'      => Youem_Saves::slots( get_current_user_id(), $id ),
 			'interval'   => (int) $s['save_interval'],
 			'library'    => self::library_url(),
@@ -504,6 +505,7 @@ class Youem_Public {
 					<span><kbd>Shift</kbd>+<kbd>3</kbd> <?php esc_html_e( 'fullscreen', 'you-emulator' ); ?></span>
 					<span class="youem-hint__pad"><?php esc_html_e( 'Gamepad: LB+RB+X save, LB+RB+B load, LB+RB+Y fullscreen', 'you-emulator' ); ?></span>
 				</div>
+				<?php self::render_controls_help( $console ); ?>
 				<?php if ( $meta ) : ?>
 					<p class="youem-game__meta"><?php echo esc_html( implode( ' · ', $meta ) ); ?></p>
 				<?php endif; ?>
@@ -514,6 +516,45 @@ class Youem_Public {
 		</div>
 		<?php
 		return (string) ob_get_clean();
+	}
+
+	/**
+	 * Collapsible list of the console's controls as configured by the administrator.
+	 *
+	 * @param string $console Console code.
+	 */
+	private static function render_controls_help( string $console ): void {
+		$layout = Youem_Controls::layout( $console );
+		if ( ! $layout ) {
+			return;
+		}
+		$map  = Youem_Controls::mapping( $console );
+		$pads = Youem_Controls::pad_inputs();
+		?>
+		<details class="youem-controls-help">
+			<summary><?php esc_html_e( 'Controls', 'you-emulator' ); ?></summary>
+			<div class="youem-controls-help__groups">
+				<?php foreach ( $layout as $group ) : ?>
+					<dl class="youem-controls-help__group">
+						<dt class="youem-controls-help__title"><?php echo esc_html( $group['label'] ); ?></dt>
+						<?php foreach ( $group['inputs'] as $id => $label ) : ?>
+							<dd>
+								<span class="youem-controls-help__btn"><?php echo esc_html( $label ); ?></span>
+								<span class="youem-controls-help__keys">
+									<?php if ( '' !== $map[ $id ]['key'] ) : ?>
+										<kbd><?php echo esc_html( Youem_Controls::key_label( $map[ $id ]['key'] ) ); ?></kbd>
+									<?php endif; ?>
+									<?php if ( '' !== $map[ $id ]['pad'] ) : ?>
+										<span class="youem-controls-help__pad"><?php echo esc_html( $pads[ $map[ $id ]['pad'] ] ?? $map[ $id ]['pad'] ); ?></span>
+									<?php endif; ?>
+								</span>
+							</dd>
+						<?php endforeach; ?>
+					</dl>
+				<?php endforeach; ?>
+			</div>
+		</details>
+		<?php
 	}
 
 	/**

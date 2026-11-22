@@ -118,7 +118,8 @@ class Youem_Admin {
 				'before'
 			);
 		} elseif ( 'youem_game_page_youem-settings' === $hook ) {
-			wp_enqueue_script( 'youem-settings', YOUEM_URL . 'admin/js/settings.js', array(), YOUEM_VERSION, true );
+			wp_enqueue_script( 'youem-settings', YOUEM_URL . 'admin/js/settings.js', array( 'wp-i18n' ), YOUEM_VERSION, true );
+			wp_set_script_translations( 'youem-settings', 'you-emulator', YOUEM_DIR . 'languages' );
 		}
 	}
 
@@ -804,6 +805,10 @@ class Youem_Admin {
 				</table>
 				<p class="description"><?php esc_html_e( 'Buttons use the standard gamepad layout (Xbox names). Pick at least two buttons per action.', 'you-emulator' ); ?></p>
 
+				<h2 class="title" id="youem-controls"><?php esc_html_e( 'Controls', 'you-emulator' ); ?></h2>
+				<p><?php esc_html_e( 'Keyboard and gamepad layout for each console. It applies to all players; players cannot change it in the emulator menu.', 'you-emulator' ); ?></p>
+				<?php self::render_controls(); ?>
+
 				<h2 class="title"><?php esc_html_e( 'Limits', 'you-emulator' ); ?></h2>
 				<table class="form-table" role="presentation">
 					<tr>
@@ -888,6 +893,79 @@ class Youem_Admin {
 				</table>
 				<?php submit_button(); ?>
 			</form>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Per-console control layout editor.
+	 */
+	private static function render_controls(): void {
+		$pads     = Youem_Controls::pad_inputs();
+		$keys     = array();
+		$consoles = array();
+		foreach ( Youem_Consoles::all() as $code => $def ) {
+			if ( Youem_Controls::layout( $code ) ) {
+				$consoles[ $code ] = $def['label'];
+			}
+		}
+		foreach ( Youem_Controls::keys() as $key ) {
+			$keys[ $key ] = Youem_Controls::key_label( $key );
+		}
+		$first = (string) array_key_first( $consoles );
+		?>
+		<div class="youem-controls" data-keys="<?php echo esc_attr( (string) wp_json_encode( $keys ) ); ?>">
+			<div class="youem-controls__tabs" role="tablist" aria-label="<?php esc_attr_e( 'Consoles', 'you-emulator' ); ?>">
+				<?php foreach ( $consoles as $code => $label ) : ?>
+					<button type="button" class="button youem-controls__tab<?php echo $code === $first ? ' is-active' : ''; ?>" role="tab" id="youem-ctab-<?php echo esc_attr( $code ); ?>" aria-controls="youem-cpanel-<?php echo esc_attr( $code ); ?>" aria-selected="<?php echo $code === $first ? 'true' : 'false'; ?>" data-console="<?php echo esc_attr( $code ); ?>"><?php echo esc_html( $label ); ?></button>
+				<?php endforeach; ?>
+			</div>
+			<?php
+			foreach ( $consoles as $code => $label ) :
+				$map      = Youem_Controls::mapping( $code );
+				$defaults = Youem_Controls::defaults( $code );
+				?>
+				<div class="youem-controls__panel" role="tabpanel" id="youem-cpanel-<?php echo esc_attr( $code ); ?>" aria-labelledby="youem-ctab-<?php echo esc_attr( $code ); ?>" data-console="<?php echo esc_attr( $code ); ?>" <?php echo $code === $first ? '' : 'hidden'; ?>>
+					<table class="widefat striped youem-controls__table">
+						<thead>
+							<tr>
+								<th scope="col"><?php echo esc_html( $label ); ?></th>
+								<th scope="col"><?php esc_html_e( 'Keyboard', 'you-emulator' ); ?></th>
+								<th scope="col"><?php esc_html_e( 'Gamepad', 'you-emulator' ); ?></th>
+							</tr>
+						</thead>
+						<?php foreach ( Youem_Controls::layout( $code ) as $group ) : ?>
+							<tbody>
+								<tr class="youem-controls__group"><th colspan="3" scope="colgroup"><?php echo esc_html( $group['label'] ); ?></th></tr>
+								<?php
+								foreach ( $group['inputs'] as $id => $input_label ) :
+									$field = self::name( 'controls' ) . '[' . $code . '][' . $id . ']';
+									$uid   = 'youem-ctl-' . $code . '-' . $id;
+									?>
+									<tr class="youem-controls__row" data-default-key="<?php echo esc_attr( $defaults[ $id ]['key'] ); ?>" data-default-pad="<?php echo esc_attr( $defaults[ $id ]['pad'] ); ?>">
+										<th scope="row"><label for="<?php echo esc_attr( $uid ); ?>"><?php echo esc_html( $input_label ); ?></label></th>
+										<td>
+											<input type="hidden" class="youem-controls__key" name="<?php echo esc_attr( $field . '[key]' ); ?>" value="<?php echo esc_attr( $map[ $id ]['key'] ); ?>">
+											<button type="button" class="button youem-controls__capture" id="<?php echo esc_attr( $uid ); ?>" aria-describedby="youem-controls-help"><?php echo esc_html( '' === $map[ $id ]['key'] ? '—' : Youem_Controls::key_label( $map[ $id ]['key'] ) ); ?></button>
+											<button type="button" class="button-link youem-controls__clear" aria-label="<?php esc_attr_e( 'Unbind key', 'you-emulator' ); ?>">×</button>
+										</td>
+										<td>
+											<select class="youem-controls__pad" name="<?php echo esc_attr( $field . '[pad]' ); ?>" aria-label="<?php echo esc_attr( $input_label . ' — ' . __( 'Gamepad', 'you-emulator' ) ); ?>">
+												<option value="">—</option>
+												<?php foreach ( $pads as $pad => $pad_label ) : ?>
+													<option value="<?php echo esc_attr( $pad ); ?>" <?php selected( $map[ $id ]['pad'], $pad ); ?>><?php echo esc_html( $pad_label ); ?></option>
+												<?php endforeach; ?>
+											</select>
+										</td>
+									</tr>
+								<?php endforeach; ?>
+							</tbody>
+						<?php endforeach; ?>
+					</table>
+					<p><button type="button" class="button youem-controls__reset"><?php esc_html_e( 'Reset this console to defaults', 'you-emulator' ); ?></button></p>
+				</div>
+			<?php endforeach; ?>
+			<p class="description" id="youem-controls-help"><?php esc_html_e( 'Click a key field and press the key. Esc cancels, Backspace or × unbinds. Keys used twice on one console are highlighted. Shift+1/2/3 stay reserved for quick save, quick load and fullscreen.', 'you-emulator' ); ?></p>
 		</div>
 		<?php
 	}

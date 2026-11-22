@@ -40,6 +40,7 @@ class Youem_Settings {
 				'load'       => array( 4, 5, 1 ),
 				'fullscreen' => array( 4, 5, 3 ),
 			),
+			'controls'           => array(),
 			'play_roles'         => array(),
 			'rom_sessions'       => 3,
 			'save_quota_mb'      => 512,
@@ -158,7 +159,8 @@ class Youem_Settings {
 			$parsed            = self::parse_combo( $in['combos'][ $action ] ?? null );
 			$combos[ $action ] = $parsed ?? $d['combos'][ $action ];
 		}
-		$out['combos'] = $combos;
+		$out['combos']   = $combos;
+		$out['controls'] = Youem_Controls::sanitize( $in['controls'] ?? array() );
 
 		$roles             = array_keys( wp_roles()->roles );
 		$out['play_roles'] = array_values( array_intersect( (array) ( $in['play_roles'] ?? array() ), $roles ) );

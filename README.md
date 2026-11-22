@@ -8,7 +8,8 @@
 - **Доступ:** гости видят только баннер. Авторизованные пользователи видят публичные игры. Приватные игры открываются выбранным пользователям и ролям.
 - **Сохранения:** 4 слота на игру (0 — быстрый), со скриншотами, хранятся на сервере и привязаны к профилю.
 - **Управление:** Shift+1 / Shift+2 / Shift+3 — быстрое сохранение / загрузка / полный экран. На геймпаде LB+RB+X / LB+RB+B / LB+RB+Y (комбинации настраиваются).
-- **Темы:** Neon, Retro-cream, Dark, CRT, все анимированные и с учётом `prefers-reduced-motion`. Игрок выбирает тему сам.
+- **Раскладки консолей:** в «Настройки → Управление» администратор задаёт клавиши клавиатуры и кнопки геймпада отдельно для каждой консоли, с её собственными кнопками (NES: A/B, Genesis: A/B/C/X/Y/Z и Mode, PS1: ✕○□△, L1–R3 и два стика, N64: C-кнопки, Z и стик). Раскладка общая для всех игроков, на странице игры есть подсказка «Управление».
+- **Темы:** Neon, Retro-cream, Dark, CRT, Synthwave, Game Boy, Arcade, Aqua, Sakura, все анимированные и с учётом `prefers-reduced-motion`. Игрок выбирает тему сам.
 - **Языки:** русский, английский, китайский.
 
 ## Требования
@@ -98,7 +99,7 @@ You Emulator turns a WordPress page into a private, login-only retro game librar
 
 - ROMs, BIOS and saves are stored in a protected folder and served only through authenticated REST endpoints, with Range support.
 - Each game has four server-side save slots per user.
-- Keyboard and gamepad shortcuts are included, plus four animated themes and per-game user/role restrictions.
+- Keyboard and gamepad shortcuts are included, admin-defined per-console keyboard/gamepad layouts, nine animated themes and per-game user/role restrictions.
 - Covers come from manual upload or TheGamesDB/ScreenScraper.
 
 Install the release ZIP, upload BIOS files, add games and place `[youem_library]` on a page. HTTPS is required; PSP also needs the COOP/COEP option.
