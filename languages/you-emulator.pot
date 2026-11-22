@@ -1,0 +1,1002 @@
+# Copyright (C) 2026 Горшков Сергей Владимирович
+# This file is distributed under the GPL-3.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: You Emulator 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/Serge-Nook/you-emulator/issues\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-22T10:13:24+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: you-emulator\n"
+
+#. Plugin Name of the plugin
+#: you-emulator.php
+msgid "You Emulator"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: you-emulator.php
+msgid "https://github.com/Serge-Nook/you-emulator"
+msgstr ""
+
+#. Description of the plugin
+#: you-emulator.php
+msgid "Retro game library for WordPress powered by EmulatorJS: NES, SNES, Sega Genesis, GBA, PlayStation, PSP and N64 right in the browser, with server-side save states, hotkeys and gamepad combos."
+msgstr ""
+
+#. Author of the plugin
+#: you-emulator.php
+msgid "Горшков Сергей Владимирович"
+msgstr ""
+
+#. Author URI of the plugin
+#: you-emulator.php
+msgid "https://nookbat.ru"
+msgstr ""
+
+#: includes/class-youem-admin.php:42
+#: includes/class-youem-admin.php:456
+msgid "BIOS files"
+msgstr ""
+
+#: includes/class-youem-admin.php:43
+#: includes/class-youem-admin.php:588
+msgid "Save states"
+msgstr ""
+
+#: includes/class-youem-admin.php:43
+msgid "Saves"
+msgstr ""
+
+#: includes/class-youem-admin.php:44
+#: includes/class-youem-admin.php:707
+msgid "You Emulator settings"
+msgstr ""
+
+#: includes/class-youem-admin.php:44
+#: includes/class-youem-admin.php:55
+msgid "Settings"
+msgstr ""
+
+#: includes/class-youem-admin.php:45
+msgid "About You Emulator"
+msgstr ""
+
+#: includes/class-youem-admin.php:45
+msgid "About"
+msgstr ""
+
+#: includes/class-youem-admin.php:66
+msgid "Game title"
+msgstr ""
+
+#: includes/class-youem-admin.php:130
+msgid "ROM file"
+msgstr ""
+
+#: includes/class-youem-admin.php:131
+msgid "Details"
+msgstr ""
+
+#: includes/class-youem-admin.php:132
+#: includes/class-youem-admin.php:348
+msgid "Cover"
+msgstr ""
+
+#: includes/class-youem-admin.php:133
+#: includes/class-youem-admin.php:355
+msgid "Access"
+msgstr ""
+
+#: includes/class-youem-admin.php:150
+#: includes/class-youem-admin.php:352
+#: includes/class-youem-game.php:100
+msgid "Console"
+msgstr ""
+
+#: includes/class-youem-admin.php:152
+msgid "— Select —"
+msgstr ""
+
+#: includes/class-youem-admin.php:157
+#: includes/class-youem-admin.php:922
+msgid "Core"
+msgstr ""
+
+#: includes/class-youem-admin.php:159
+msgid "Default"
+msgstr ""
+
+#. translators: 1: file name, 2: size.
+#. translators: 1: file, 2: size.
+#: includes/class-youem-admin.php:169
+#: admin/js/admin.js:113
+#, php-format,js-format
+msgid "Current file: %1$s (%2$s)"
+msgstr ""
+
+#: includes/class-youem-admin.php:172
+msgid "No ROM uploaded yet."
+msgstr ""
+
+#: includes/class-youem-admin.php:177
+msgid "Drop ROM files here or click to choose"
+msgstr ""
+
+#: includes/class-youem-admin.php:181
+msgid "Large files are sent in resumable chunks. For PS1 select the .cue together with all its .bin tracks."
+msgstr ""
+
+#: includes/class-youem-admin.php:193
+msgid "Year"
+msgstr ""
+
+#: includes/class-youem-admin.php:194
+msgid "Developer"
+msgstr ""
+
+#: includes/class-youem-admin.php:195
+msgid "Players"
+msgstr ""
+
+#: includes/class-youem-admin.php:223
+#: admin/js/admin.js:162
+msgid "Choose cover"
+msgstr ""
+
+#: includes/class-youem-admin.php:224
+#: includes/class-youem-admin.php:272
+#: admin/js/admin.js:246
+msgid "Remove"
+msgstr ""
+
+#: includes/class-youem-admin.php:227
+msgid "Auto-fill from database"
+msgstr ""
+
+#: includes/class-youem-admin.php:233
+msgid "Set up TheGamesDB or ScreenScraper in Settings to enable auto-fill."
+msgstr ""
+
+#: includes/class-youem-admin.php:253
+msgid "All logged-in users"
+msgstr ""
+
+#: includes/class-youem-admin.php:254
+msgid "Only selected users and roles"
+msgstr ""
+
+#: includes/class-youem-admin.php:257
+msgid "Roles"
+msgstr ""
+
+#: includes/class-youem-admin.php:261
+msgid "Users"
+msgstr ""
+
+#: includes/class-youem-admin.php:262
+msgid "Search users…"
+msgstr ""
+
+#: includes/class-youem-admin.php:353
+#: includes/class-youem-game.php:120
+#: includes/class-youem-game.php:122
+msgid "Genres"
+msgstr ""
+
+#: includes/class-youem-admin.php:382
+msgid "missing"
+msgstr ""
+
+#: includes/class-youem-admin.php:385
+msgid "Private"
+msgstr ""
+
+#: includes/class-youem-admin.php:385
+msgid "All users"
+msgstr ""
+
+#: includes/class-youem-admin.php:400
+msgid "All consoles"
+msgstr ""
+
+#: includes/class-youem-admin.php:457
+msgid "BIOS files are stored in a protected folder and are sent only to logged-in players of the matching system."
+msgstr ""
+
+#: includes/class-youem-admin.php:470
+msgid "Installed"
+msgstr ""
+
+#: includes/class-youem-admin.php:472
+msgid "Required"
+msgstr ""
+
+#: includes/class-youem-admin.php:474
+msgid "Optional"
+msgstr ""
+
+#. translators: %s: list of file names.
+#: includes/class-youem-admin.php:482
+#, php-format
+msgid "Expected files: %s"
+msgstr ""
+
+#: includes/class-youem-admin.php:487
+msgid "File"
+msgstr ""
+
+#: includes/class-youem-admin.php:487
+#: includes/class-youem-admin.php:598
+msgid "Size"
+msgstr ""
+
+#: includes/class-youem-admin.php:500
+#: includes/class-youem-admin.php:620
+#: public/js/player.js:160
+msgid "Delete"
+msgstr ""
+
+#: includes/class-youem-admin.php:513
+msgid "Upload"
+msgstr ""
+
+#: includes/class-youem-admin.php:527
+#: includes/class-youem-admin.php:557
+#: includes/class-youem-admin.php:650
+msgid "Sorry, you are not allowed to do that."
+msgstr ""
+
+#. translators: %d: number of files.
+#: includes/class-youem-admin.php:548
+#, php-format
+msgid "%d BIOS file uploaded."
+msgid_plural "%d BIOS files uploaded."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-youem-admin.php:560
+msgid "BIOS file deleted."
+msgstr ""
+
+#: includes/class-youem-admin.php:560
+msgid "Could not delete the file."
+msgstr ""
+
+#: includes/class-youem-admin.php:590
+msgid "show all"
+msgstr ""
+
+#: includes/class-youem-admin.php:595
+msgid "User"
+msgstr ""
+
+#: includes/class-youem-admin.php:596
+#: includes/class-youem-game.php:39
+msgid "Game"
+msgstr ""
+
+#: includes/class-youem-admin.php:597
+msgid "Slot"
+msgstr ""
+
+#: includes/class-youem-admin.php:599
+msgid "Updated"
+msgstr ""
+
+#: includes/class-youem-admin.php:605
+msgid "No saves yet."
+msgstr ""
+
+#: includes/class-youem-admin.php:612
+msgid "Quick"
+msgstr ""
+
+#: includes/class-youem-admin.php:653
+msgid "Save deleted."
+msgstr ""
+
+#: includes/class-youem-admin.php:653
+msgid "Could not delete the save."
+msgstr ""
+
+#: includes/class-youem-admin.php:710
+msgid "Library and player"
+msgstr ""
+
+#: includes/class-youem-admin.php:713
+msgid "Games per page"
+msgstr ""
+
+#: includes/class-youem-admin.php:717
+msgid "Open games"
+msgstr ""
+
+#: includes/class-youem-admin.php:719
+msgid "On a separate page"
+msgstr ""
+
+#: includes/class-youem-admin.php:720
+msgid "In a popup over the library"
+msgstr ""
+
+#: includes/class-youem-admin.php:724
+msgid "Default theme"
+msgstr ""
+
+#: includes/class-youem-admin.php:731
+msgid "Players can pick their own theme in the library or in their profile."
+msgstr ""
+
+#: includes/class-youem-admin.php:735
+msgid "Video shader"
+msgstr ""
+
+#: includes/class-youem-admin.php:745
+msgid "Default volume"
+msgstr ""
+
+#: includes/class-youem-admin.php:749
+msgid "Who can play"
+msgstr ""
+
+#: includes/class-youem-admin.php:754
+msgid "Leave all unchecked to allow every logged-in user."
+msgstr ""
+
+#: includes/class-youem-admin.php:759
+msgid "Guest banner"
+msgstr ""
+
+#: includes/class-youem-admin.php:762
+msgid "Title"
+msgstr ""
+
+#: includes/class-youem-admin.php:766
+msgid "Text"
+msgstr ""
+
+#: includes/class-youem-admin.php:779
+msgid "Shown instead of the library to visitors who are not logged in. Log in and sign up buttons are added automatically."
+msgstr ""
+
+#: includes/class-youem-admin.php:784
+msgid "Gamepad shortcuts"
+msgstr ""
+
+#: includes/class-youem-admin.php:785
+msgid "Keyboard: Shift+1 quick save, Shift+2 quick load, Shift+3 fullscreen."
+msgstr ""
+
+#: includes/class-youem-admin.php:789
+#: public/js/player.js:33
+msgid "Quick save"
+msgstr ""
+
+#: includes/class-youem-admin.php:790
+msgid "Quick load"
+msgstr ""
+
+#: includes/class-youem-admin.php:791
+#: includes/class-youem-public.php:449
+msgid "Fullscreen"
+msgstr ""
+
+#: includes/class-youem-admin.php:805
+msgid "Buttons use the standard gamepad layout (Xbox names). Pick at least two buttons per action."
+msgstr ""
+
+#: includes/class-youem-admin.php:807
+msgid "Limits"
+msgstr ""
+
+#: includes/class-youem-admin.php:810
+msgid "Save quota per user, MB"
+msgstr ""
+
+#: includes/class-youem-admin.php:814
+msgid "Minimum seconds between saves"
+msgstr ""
+
+#: includes/class-youem-admin.php:818
+msgid "Games a user may open within 15 minutes"
+msgstr ""
+
+#: includes/class-youem-admin.php:822
+msgid "Upload chunk size, MB"
+msgstr ""
+
+#. translators: %s: size.
+#: includes/class-youem-admin.php:828
+#, php-format
+msgid "Server upload limit: %s. The effective chunk size is never larger."
+msgstr ""
+
+#: includes/class-youem-admin.php:835
+msgid "Metadata and covers"
+msgstr ""
+
+#: includes/class-youem-admin.php:838
+msgid "Provider"
+msgstr ""
+
+#: includes/class-youem-admin.php:841
+msgid "Off (manual covers only)"
+msgstr ""
+
+#: includes/class-youem-admin.php:848
+msgid "TheGamesDB API key"
+msgstr ""
+
+#: includes/class-youem-admin.php:853
+msgid "ScreenScraper developer ID"
+msgstr ""
+
+#: includes/class-youem-admin.php:854
+msgid "ScreenScraper developer password"
+msgstr ""
+
+#: includes/class-youem-admin.php:855
+msgid "ScreenScraper user (optional)"
+msgstr ""
+
+#: includes/class-youem-admin.php:856
+msgid "ScreenScraper password (optional)"
+msgstr ""
+
+#: includes/class-youem-admin.php:867
+msgid "Advanced"
+msgstr ""
+
+#: includes/class-youem-admin.php:870
+msgid "Cross-origin isolation (PSP)"
+msgstr ""
+
+#: includes/class-youem-admin.php:875
+#: includes/class-youem-settings.php:98
+msgid "Off"
+msgstr ""
+
+#: includes/class-youem-admin.php:877
+msgid "The PSP core needs SharedArrayBuffer, which browsers enable only on HTTPS pages sent with COOP/COEP headers."
+msgstr ""
+
+#: includes/class-youem-admin.php:881
+msgid "Emulator files"
+msgstr ""
+
+#: includes/class-youem-admin.php:882
+msgid "Load EmulatorJS from cdn.emulatorjs.org instead of the plugin folder"
+msgstr ""
+
+#: includes/class-youem-admin.php:885
+msgid "Uninstall"
+msgstr ""
+
+#: includes/class-youem-admin.php:886
+msgid "Delete all games, ROMs, BIOS and saves when the plugin is deleted"
+msgstr ""
+
+#: includes/class-youem-admin.php:909
+msgid "Retro game library for WordPress powered by EmulatorJS."
+msgstr ""
+
+#: includes/class-youem-admin.php:911
+msgid "Author"
+msgstr ""
+
+#: includes/class-youem-admin.php:912
+msgid "Sergey Gorshkov"
+msgstr ""
+
+#: includes/class-youem-admin.php:918
+msgid "The emulator is EmulatorJS, distributed under the GNU General Public License v3.0. Cores are libretro projects under their own licenses."
+msgstr ""
+
+#: includes/class-youem-admin.php:922
+msgid "Bundled"
+msgstr ""
+
+#: includes/class-youem-admin.php:931
+msgid "How to use"
+msgstr ""
+
+#: includes/class-youem-admin.php:933
+msgid "Upload BIOS files for PS1 (and optionally GBA)."
+msgstr ""
+
+#: includes/class-youem-admin.php:934
+msgid "Add games: title, console, ROM file, cover, genres and access."
+msgstr ""
+
+#: includes/class-youem-admin.php:935
+msgid "Put the [youem_library] shortcode or the \"Retro game library\" block on any page."
+msgstr ""
+
+#: includes/class-youem-admin.php:938
+msgid "Only upload games you have the right to distribute."
+msgstr ""
+
+#. translators: 1: file name, 2: allowed names or extensions.
+#: includes/class-youem-bios.php:85
+#, php-format
+msgid "\"%1$s\" is not a known BIOS file for this system. Allowed: %2$s"
+msgstr ""
+
+#: includes/class-youem-bios.php:91
+msgid "BIOS file is too large."
+msgstr ""
+
+#: includes/class-youem-bios.php:96
+msgid "Could not store the BIOS file."
+msgstr ""
+
+#: includes/class-youem-covers.php:27
+#: includes/class-youem-upload.php:170
+msgid "Choose a console first."
+msgstr ""
+
+#: includes/class-youem-covers.php:36
+msgid "Select a metadata provider and enter its API key in Settings."
+msgstr ""
+
+#. translators: %d: HTTP status code.
+#: includes/class-youem-covers.php:60
+#, php-format
+msgid "Metadata provider returned HTTP %d."
+msgstr ""
+
+#: includes/class-youem-covers.php:75
+msgid "Enter the TheGamesDB API key in Settings."
+msgstr ""
+
+#: includes/class-youem-covers.php:93
+#: includes/class-youem-covers.php:196
+msgid "Nothing found in the database."
+msgstr ""
+
+#: includes/class-youem-covers.php:164
+msgid "Enter ScreenScraper developer credentials in Settings."
+msgstr ""
+
+#: includes/class-youem-game.php:38
+#: includes/class-youem-game.php:41
+msgid "Games"
+msgstr ""
+
+#: includes/class-youem-game.php:42
+#: includes/class-youem-game.php:43
+msgid "Add game"
+msgstr ""
+
+#: includes/class-youem-game.php:44
+msgid "Edit game"
+msgstr ""
+
+#: includes/class-youem-game.php:45
+msgid "New game"
+msgstr ""
+
+#: includes/class-youem-game.php:46
+msgid "View game"
+msgstr ""
+
+#: includes/class-youem-game.php:47
+#: includes/class-youem-public.php:229
+msgid "Search games"
+msgstr ""
+
+#: includes/class-youem-game.php:48
+msgid "No games found"
+msgstr ""
+
+#: includes/class-youem-game.php:49
+msgid "No games found in Trash"
+msgstr ""
+
+#: includes/class-youem-game.php:99
+#: includes/class-youem-game.php:101
+#: includes/class-youem-public.php:213
+msgid "Consoles"
+msgstr ""
+
+#: includes/class-youem-game.php:121
+#: includes/class-youem-public.php:232
+msgid "Genre"
+msgstr ""
+
+#: includes/class-youem-game.php:123
+msgid "Add genre"
+msgstr ""
+
+#: includes/class-youem-game.php:195
+msgid "Action"
+msgstr ""
+
+#: includes/class-youem-game.php:195
+msgid "Racing"
+msgstr ""
+
+#: includes/class-youem-game.php:195
+msgid "Platformer"
+msgstr ""
+
+#: includes/class-youem-game.php:195
+msgid "Fighting"
+msgstr ""
+
+#: includes/class-youem-game.php:195
+msgid "Shooter"
+msgstr ""
+
+#: includes/class-youem-game.php:195
+msgid "Puzzle"
+msgstr ""
+
+#: includes/class-youem-game.php:195
+msgid "Sports"
+msgstr ""
+
+#: includes/class-youem-public.php:64
+#: includes/class-youem-public.php:320
+#: includes/class-youem-public.php:321
+#: public/js/block.js:21
+msgid "Retro game library"
+msgstr ""
+
+#: includes/class-youem-public.php:140
+#: includes/class-youem-settings.php:37
+msgid "Log in"
+msgstr ""
+
+#: includes/class-youem-public.php:142
+msgid "Sign up"
+msgstr ""
+
+#: includes/class-youem-public.php:189
+msgid "Your account is not allowed to play games."
+msgstr ""
+
+#: includes/class-youem-public.php:215
+#: public/js/block.js:9
+msgid "All"
+msgstr ""
+
+#: includes/class-youem-public.php:230
+msgid "Search games…"
+msgstr ""
+
+#: includes/class-youem-public.php:234
+msgid "All genres"
+msgstr ""
+
+#: includes/class-youem-public.php:244
+msgid "No games found."
+msgstr ""
+
+#: includes/class-youem-public.php:245
+msgid "Load more"
+msgstr ""
+
+#: includes/class-youem-public.php:272
+#: includes/class-youem-public.php:273
+#: includes/class-youem-themes.php:115
+msgid "Theme"
+msgstr ""
+
+#: includes/class-youem-public.php:445
+msgid "Back to library"
+msgstr ""
+
+#: includes/class-youem-public.php:448
+#: includes/class-youem-public.php:462
+msgid "Save slots"
+msgstr ""
+
+#: includes/class-youem-public.php:449
+msgid "Fullscreen (Shift+3)"
+msgstr ""
+
+#: includes/class-youem-public.php:456
+#: includes/class-youem-rest.php:398
+msgid "ROM file is missing."
+msgstr ""
+
+#: includes/class-youem-public.php:458
+msgid "This system needs a BIOS. Ask the site administrator to upload it."
+msgstr ""
+
+#: includes/class-youem-public.php:469
+msgid "quick save"
+msgstr ""
+
+#: includes/class-youem-public.php:470
+msgid "quick load"
+msgstr ""
+
+#: includes/class-youem-public.php:471
+msgid "fullscreen"
+msgstr ""
+
+#: includes/class-youem-public.php:472
+msgid "Gamepad: LB+RB+X save, LB+RB+B load, LB+RB+Y fullscreen"
+msgstr ""
+
+#: includes/class-youem-rest.php:272
+msgid "Log in to play."
+msgstr ""
+
+#: includes/class-youem-rest.php:274
+msgid "You are not allowed to play."
+msgstr ""
+
+#: includes/class-youem-rest.php:288
+msgid "Game not found."
+msgstr ""
+
+#: includes/class-youem-rest.php:401
+msgid "Too many games opened at once. Close other games and try again in a few minutes."
+msgstr ""
+
+#: includes/class-youem-rest.php:422
+msgid "BIOS is not uploaded for this system."
+msgstr ""
+
+#: includes/class-youem-rest.php:458
+#: includes/class-youem-saves.php:98
+msgid "Empty save state."
+msgstr ""
+
+#: includes/class-youem-rest.php:489
+#: public/js/player.js:100
+msgid "This slot is empty."
+msgstr ""
+
+#: includes/class-youem-rest.php:503
+msgid "No screenshot."
+msgstr ""
+
+#: includes/class-youem-rest.php:548
+msgid "Unknown theme."
+msgstr ""
+
+#: includes/class-youem-rest.php:562
+#: includes/class-youem-upload.php:97
+msgid "Chunk upload failed."
+msgstr ""
+
+#: includes/class-youem-rest.php:602
+#: includes/class-youem-upload.php:167
+msgid "Unknown game."
+msgstr ""
+
+#: includes/class-youem-saves.php:95
+msgid "Invalid save slot."
+msgstr ""
+
+#. translators: %d: seconds.
+#: includes/class-youem-saves.php:104
+#, php-format
+msgid "Please wait %d seconds between saves."
+msgstr ""
+
+#: includes/class-youem-saves.php:115
+msgid "Save storage quota exceeded. Delete old saves and try again."
+msgstr ""
+
+#: includes/class-youem-saves.php:125
+msgid "Could not write the save file."
+msgstr ""
+
+#: includes/class-youem-saves.php:159
+msgid "Could not store the save state."
+msgstr ""
+
+#: includes/class-youem-settings.php:36
+msgid "Retro games are waiting for you"
+msgstr ""
+
+#: includes/class-youem-settings.php:37
+msgid "The game library is available to registered users only. Sign up or log in to play NES, SNES, Sega Genesis, GBA, PlayStation, PSP and N64 games right in your browser, with saves synced to your profile."
+msgstr ""
+
+#: includes/class-youem-settings.php:37
+msgid "Get access"
+msgstr ""
+
+#: includes/class-youem-themes.php:36
+msgid "Neon"
+msgstr ""
+
+#: includes/class-youem-themes.php:37
+msgid "Retro cream"
+msgstr ""
+
+#: includes/class-youem-themes.php:38
+msgid "Dark"
+msgstr ""
+
+#: includes/class-youem-themes.php:118
+msgid "Site default"
+msgstr ""
+
+#: includes/class-youem-upload.php:94
+msgid "Invalid chunk parameters."
+msgstr ""
+
+#: includes/class-youem-upload.php:100
+msgid "Chunk is too large."
+msgstr ""
+
+#: includes/class-youem-upload.php:107
+msgid "Could not store the chunk."
+msgstr ""
+
+#: includes/class-youem-upload.php:122
+msgid "Invalid upload."
+msgstr ""
+
+#. translators: %d: chunk number.
+#: includes/class-youem-upload.php:129
+#, php-format
+msgid "Chunk %d is missing, resume the upload."
+msgstr ""
+
+#: includes/class-youem-upload.php:134
+msgid "The file is too large."
+msgstr ""
+
+#: includes/class-youem-upload.php:140
+msgid "Could not assemble the file."
+msgstr ""
+
+#: includes/class-youem-upload.php:146
+msgid "Could not read a chunk."
+msgstr ""
+
+#: includes/class-youem-upload.php:173
+msgid "No files to assemble."
+msgstr ""
+
+#. translators: %s: file name.
+#: includes/class-youem-upload.php:180
+#, php-format
+msgid "File type of \"%s\" is not supported for this console."
+msgstr ""
+
+#: includes/class-youem-upload.php:217
+msgid "Upload the .cue together with all its .bin tracks (select them all at once) or as a .zip."
+msgstr ""
+
+#: includes/class-youem-upload.php:222
+msgid "Could not store the ROM."
+msgstr ""
+
+#: includes/class-youem-upload.php:265
+msgid "A multi-file upload must contain exactly one .cue sheet."
+msgstr ""
+
+#. translators: %s: list of file names.
+#: includes/class-youem-upload.php:278
+#, php-format
+msgid "The cue sheet references missing files: %s"
+msgstr ""
+
+#. translators: %s: file extension.
+#: includes/class-youem-validator.php:50
+#, php-format
+msgid "The file does not look like a valid .%s image (signature check failed)."
+msgstr ""
+
+#. translators: %s: extensions.
+#: admin/js/admin.js:52
+#, js-format
+msgid "Allowed: %s"
+msgstr ""
+
+#: admin/js/admin.js:53
+#: admin/js/admin.js:72
+msgid "Select a console first."
+msgstr ""
+
+#. translators: %s: file name.
+#: admin/js/admin.js:82
+#, js-format
+msgid "File type is not allowed for this console: %s"
+msgstr ""
+
+#. translators: %s: file name.
+#: admin/js/admin.js:86
+#, js-format
+msgid "File is too large: %s"
+msgstr ""
+
+#: admin/js/admin.js:109
+msgid "Checking and saving…"
+msgstr ""
+
+#: admin/js/admin.js:112
+msgid "Done."
+msgstr ""
+
+#: admin/js/admin.js:186
+msgid "Enter the title and select a console first."
+msgstr ""
+
+#. translators: %s: game title.
+#: admin/js/admin.js:210
+#, js-format
+msgid "Found: %s. Reload the page to see new genres."
+msgstr ""
+
+#: public/js/block.js:38
+msgid "Library"
+msgstr ""
+
+#: public/js/block.js:40
+msgid "Initial console"
+msgstr ""
+
+#: public/js/block.js:46
+msgid "Games per page (0 = default)"
+msgstr ""
+
+#: public/js/library.js:72
+msgid "Close"
+msgstr ""
+
+#. translators: %d: slot number.
+#: public/js/player.js:33
+#, js-format
+msgid "Slot %d"
+msgstr ""
+
+#: public/js/player.js:65
+#: public/js/player.js:87
+msgid "Start the game first."
+msgstr ""
+
+#. translators: %s: slot name.
+#: public/js/player.js:76
+#, js-format
+msgid "Saved: %s"
+msgstr ""
+
+#: public/js/player.js:78
+msgid "Could not save."
+msgstr ""
+
+#. translators: %s: slot name.
+#: public/js/player.js:98
+#, js-format
+msgid "Loaded: %s"
+msgstr ""
+
+#: public/js/player.js:107
+msgid "Delete this save?"
+msgstr ""
+
+#: public/js/player.js:144
+msgid "Empty"
+msgstr ""
+
+#: public/js/player.js:157
+msgid "Save"
+msgstr ""
+
+#: public/js/player.js:158
+msgid "Load"
+msgstr ""
+
+#: public/js/player.js:178
+msgid "Fullscreen is not available."
+msgstr ""
+
+#: public/js/player.js:203
+msgid "This system needs HTTPS and cross-origin isolation. Ask the site administrator."
+msgstr ""

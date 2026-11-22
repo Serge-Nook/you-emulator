@@ -1,0 +1,955 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: You Emulator 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/Serge-Nook/you-emulator/issues\n"
+"POT-Creation-Date: 2026-11-22T10:13:24+00:00\n"
+"PO-Revision-Date: 2026-11-22 12:00+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Chinese (China)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Domain: you-emulator\n"
+"X-Generator: WP-CLI 2.12.0\n"
+
+#. Plugin Name of the plugin
+#: you-emulator.php
+msgid "You Emulator"
+msgstr "You Emulator"
+
+#. Plugin URI of the plugin
+#: you-emulator.php
+msgid "https://github.com/Serge-Nook/you-emulator"
+msgstr "https://github.com/Serge-Nook/you-emulator"
+
+#. Description of the plugin
+#: you-emulator.php
+msgid "Retro game library for WordPress powered by EmulatorJS: NES, SNES, Sega Genesis, GBA, PlayStation, PSP and N64 right in the browser, with server-side save states, hotkeys and gamepad combos."
+msgstr "基于 EmulatorJS 的 WordPress 复古游戏库：在浏览器中直接畅玩 NES、SNES、世嘉 Genesis、GBA、PlayStation、PSP 和 N64，支持服务器存档、快捷键和手柄组合键。"
+
+#. Author of the plugin
+#: you-emulator.php
+msgid "Горшков Сергей Владимирович"
+msgstr "Горшков Сергей Владимирович"
+
+#. Author URI of the plugin
+#: you-emulator.php
+msgid "https://nookbat.ru"
+msgstr "https://nookbat.ru"
+
+#: includes/class-youem-admin.php:42 includes/class-youem-admin.php:456
+msgid "BIOS files"
+msgstr "BIOS 文件"
+
+#: includes/class-youem-admin.php:43 includes/class-youem-admin.php:588
+msgid "Save states"
+msgstr "存档"
+
+#: includes/class-youem-admin.php:43
+msgid "Saves"
+msgstr "存档"
+
+#: includes/class-youem-admin.php:44 includes/class-youem-admin.php:707
+msgid "You Emulator settings"
+msgstr "You Emulator 设置"
+
+#: includes/class-youem-admin.php:44 includes/class-youem-admin.php:55
+msgid "Settings"
+msgstr "设置"
+
+#: includes/class-youem-admin.php:45
+msgid "About You Emulator"
+msgstr "关于 You Emulator"
+
+#: includes/class-youem-admin.php:45
+msgid "About"
+msgstr "关于"
+
+#: includes/class-youem-admin.php:66
+msgid "Game title"
+msgstr "游戏名称"
+
+#: includes/class-youem-admin.php:130
+msgid "ROM file"
+msgstr "ROM 文件"
+
+#: includes/class-youem-admin.php:131
+msgid "Details"
+msgstr "详情"
+
+#: includes/class-youem-admin.php:132 includes/class-youem-admin.php:348
+msgid "Cover"
+msgstr "封面"
+
+#: includes/class-youem-admin.php:133 includes/class-youem-admin.php:355
+msgid "Access"
+msgstr "访问权限"
+
+#: includes/class-youem-admin.php:150 includes/class-youem-admin.php:352 includes/class-youem-game.php:100
+msgid "Console"
+msgstr "主机"
+
+#: includes/class-youem-admin.php:152
+msgid "— Select —"
+msgstr "— 请选择 —"
+
+#: includes/class-youem-admin.php:157 includes/class-youem-admin.php:922
+msgid "Core"
+msgstr "核心"
+
+#: includes/class-youem-admin.php:159
+msgid "Default"
+msgstr "默认"
+
+#. translators: 1: file name, 2: size.
+#. translators: 1: file, 2: size.
+#: includes/class-youem-admin.php:169 admin/js/admin.js:113
+#, php-format, js-format
+msgid "Current file: %1$s (%2$s)"
+msgstr "当前文件：%1$s（%2$s）"
+
+#: includes/class-youem-admin.php:172
+msgid "No ROM uploaded yet."
+msgstr "尚未上传 ROM。"
+
+#: includes/class-youem-admin.php:177
+msgid "Drop ROM files here or click to choose"
+msgstr "将 ROM 文件拖到此处或点击选择"
+
+#: includes/class-youem-admin.php:181
+msgid "Large files are sent in resumable chunks. For PS1 select the .cue together with all its .bin tracks."
+msgstr "大文件会分块上传并支持断点续传。PS1 请同时选择 .cue 及其所有 .bin 音轨。"
+
+#: includes/class-youem-admin.php:193
+msgid "Year"
+msgstr "年份"
+
+#: includes/class-youem-admin.php:194
+msgid "Developer"
+msgstr "开发商"
+
+#: includes/class-youem-admin.php:195
+msgid "Players"
+msgstr "玩家人数"
+
+#: includes/class-youem-admin.php:223 admin/js/admin.js:162
+msgid "Choose cover"
+msgstr "选择封面"
+
+#: includes/class-youem-admin.php:224 includes/class-youem-admin.php:272 admin/js/admin.js:246
+msgid "Remove"
+msgstr "移除"
+
+#: includes/class-youem-admin.php:227
+msgid "Auto-fill from database"
+msgstr "从数据库自动填充"
+
+#: includes/class-youem-admin.php:233
+msgid "Set up TheGamesDB or ScreenScraper in Settings to enable auto-fill."
+msgstr "在设置中配置 TheGamesDB 或 ScreenScraper 以启用自动填充。"
+
+#: includes/class-youem-admin.php:253
+msgid "All logged-in users"
+msgstr "所有已登录用户"
+
+#: includes/class-youem-admin.php:254
+msgid "Only selected users and roles"
+msgstr "仅限选定的用户和角色"
+
+#: includes/class-youem-admin.php:257
+msgid "Roles"
+msgstr "角色"
+
+#: includes/class-youem-admin.php:261
+msgid "Users"
+msgstr "用户"
+
+#: includes/class-youem-admin.php:262
+msgid "Search users…"
+msgstr "搜索用户…"
+
+#: includes/class-youem-admin.php:353 includes/class-youem-game.php:120 includes/class-youem-game.php:122
+msgid "Genres"
+msgstr "类型"
+
+#: includes/class-youem-admin.php:382
+msgid "missing"
+msgstr "缺失"
+
+#: includes/class-youem-admin.php:385
+msgid "Private"
+msgstr "私有"
+
+#: includes/class-youem-admin.php:385
+msgid "All users"
+msgstr "所有用户"
+
+#: includes/class-youem-admin.php:400
+msgid "All consoles"
+msgstr "所有主机"
+
+#: includes/class-youem-admin.php:457
+msgid "BIOS files are stored in a protected folder and are sent only to logged-in players of the matching system."
+msgstr "BIOS 文件保存在受保护的文件夹中，仅发送给对应主机的已登录玩家。"
+
+#: includes/class-youem-admin.php:470
+msgid "Installed"
+msgstr "已安装"
+
+#: includes/class-youem-admin.php:472
+msgid "Required"
+msgstr "必需"
+
+#: includes/class-youem-admin.php:474
+msgid "Optional"
+msgstr "可选"
+
+#. translators: %s: list of file names.
+#: includes/class-youem-admin.php:482
+#, php-format
+msgid "Expected files: %s"
+msgstr "所需文件：%s"
+
+#: includes/class-youem-admin.php:487
+msgid "File"
+msgstr "文件"
+
+#: includes/class-youem-admin.php:487 includes/class-youem-admin.php:598
+msgid "Size"
+msgstr "大小"
+
+#: includes/class-youem-admin.php:500 includes/class-youem-admin.php:620 public/js/player.js:160
+msgid "Delete"
+msgstr "删除"
+
+#: includes/class-youem-admin.php:513
+msgid "Upload"
+msgstr "上传"
+
+#: includes/class-youem-admin.php:527 includes/class-youem-admin.php:557 includes/class-youem-admin.php:650
+msgid "Sorry, you are not allowed to do that."
+msgstr "抱歉，您无权执行此操作。"
+
+#. translators: %d: number of files.
+#: includes/class-youem-admin.php:548
+#, php-format
+msgid "%d BIOS file uploaded."
+msgid_plural "%d BIOS files uploaded."
+msgstr[0] "已上传 %d 个 BIOS 文件。"
+
+#: includes/class-youem-admin.php:560
+msgid "BIOS file deleted."
+msgstr "BIOS 文件已删除。"
+
+#: includes/class-youem-admin.php:560
+msgid "Could not delete the file."
+msgstr "无法删除文件。"
+
+#: includes/class-youem-admin.php:590
+msgid "show all"
+msgstr "显示全部"
+
+#: includes/class-youem-admin.php:595
+msgid "User"
+msgstr "用户"
+
+#: includes/class-youem-admin.php:596 includes/class-youem-game.php:39
+msgid "Game"
+msgstr "游戏"
+
+#: includes/class-youem-admin.php:597
+msgid "Slot"
+msgstr "槽位"
+
+#: includes/class-youem-admin.php:599
+msgid "Updated"
+msgstr "更新时间"
+
+#: includes/class-youem-admin.php:605
+msgid "No saves yet."
+msgstr "暂无存档。"
+
+#: includes/class-youem-admin.php:612
+msgid "Quick"
+msgstr "快速"
+
+#: includes/class-youem-admin.php:653
+msgid "Save deleted."
+msgstr "存档已删除。"
+
+#: includes/class-youem-admin.php:653
+msgid "Could not delete the save."
+msgstr "无法删除存档。"
+
+#: includes/class-youem-admin.php:710
+msgid "Library and player"
+msgstr "游戏库与播放器"
+
+#: includes/class-youem-admin.php:713
+msgid "Games per page"
+msgstr "每页游戏数"
+
+#: includes/class-youem-admin.php:717
+msgid "Open games"
+msgstr "打开游戏方式"
+
+#: includes/class-youem-admin.php:719
+msgid "On a separate page"
+msgstr "在单独页面中"
+
+#: includes/class-youem-admin.php:720
+msgid "In a popup over the library"
+msgstr "在游戏库上方的弹窗中"
+
+#: includes/class-youem-admin.php:724
+msgid "Default theme"
+msgstr "默认主题"
+
+#: includes/class-youem-admin.php:731
+msgid "Players can pick their own theme in the library or in their profile."
+msgstr "玩家可以在游戏库或个人资料中选择自己的主题。"
+
+#: includes/class-youem-admin.php:735
+msgid "Video shader"
+msgstr "视频着色器"
+
+#: includes/class-youem-admin.php:745
+msgid "Default volume"
+msgstr "默认音量"
+
+#: includes/class-youem-admin.php:749
+msgid "Who can play"
+msgstr "谁可以游玩"
+
+#: includes/class-youem-admin.php:754
+msgid "Leave all unchecked to allow every logged-in user."
+msgstr "全部不勾选则允许所有已登录用户。"
+
+#: includes/class-youem-admin.php:759
+msgid "Guest banner"
+msgstr "访客横幅"
+
+#: includes/class-youem-admin.php:762
+msgid "Title"
+msgstr "标题"
+
+#: includes/class-youem-admin.php:766
+msgid "Text"
+msgstr "文本"
+
+#: includes/class-youem-admin.php:779
+msgid "Shown instead of the library to visitors who are not logged in. Log in and sign up buttons are added automatically."
+msgstr "向未登录访客显示以代替游戏库。会自动添加登录和注册按钮。"
+
+#: includes/class-youem-admin.php:784
+msgid "Gamepad shortcuts"
+msgstr "手柄组合键"
+
+#: includes/class-youem-admin.php:785
+msgid "Keyboard: Shift+1 quick save, Shift+2 quick load, Shift+3 fullscreen."
+msgstr "键盘：Shift+1 快速存档，Shift+2 快速读档，Shift+3 全屏。"
+
+#: includes/class-youem-admin.php:789 public/js/player.js:33
+msgid "Quick save"
+msgstr "快速存档"
+
+#: includes/class-youem-admin.php:790
+msgid "Quick load"
+msgstr "快速读档"
+
+#: includes/class-youem-admin.php:791 includes/class-youem-public.php:449
+msgid "Fullscreen"
+msgstr "全屏"
+
+#: includes/class-youem-admin.php:805
+msgid "Buttons use the standard gamepad layout (Xbox names). Pick at least two buttons per action."
+msgstr "按钮采用标准手柄布局（Xbox 名称）。每个动作至少选择两个按钮。"
+
+#: includes/class-youem-admin.php:807
+msgid "Limits"
+msgstr "限制"
+
+#: includes/class-youem-admin.php:810
+msgid "Save quota per user, MB"
+msgstr "每位用户的存档配额（MB）"
+
+#: includes/class-youem-admin.php:814
+msgid "Minimum seconds between saves"
+msgstr "两次存档的最少间隔秒数"
+
+#: includes/class-youem-admin.php:818
+msgid "Games a user may open within 15 minutes"
+msgstr "用户在 15 分钟内可打开的游戏数"
+
+#: includes/class-youem-admin.php:822
+msgid "Upload chunk size, MB"
+msgstr "上传分块大小（MB）"
+
+#. translators: %s: size.
+#: includes/class-youem-admin.php:828
+#, php-format
+msgid "Server upload limit: %s. The effective chunk size is never larger."
+msgstr "服务器上传限制：%s。实际分块大小不会超过此值。"
+
+#: includes/class-youem-admin.php:835
+msgid "Metadata and covers"
+msgstr "元数据与封面"
+
+#: includes/class-youem-admin.php:838
+msgid "Provider"
+msgstr "数据源"
+
+#: includes/class-youem-admin.php:841
+msgid "Off (manual covers only)"
+msgstr "关闭（仅手动封面）"
+
+#: includes/class-youem-admin.php:848
+msgid "TheGamesDB API key"
+msgstr "TheGamesDB API 密钥"
+
+#: includes/class-youem-admin.php:853
+msgid "ScreenScraper developer ID"
+msgstr "ScreenScraper 开发者 ID"
+
+#: includes/class-youem-admin.php:854
+msgid "ScreenScraper developer password"
+msgstr "ScreenScraper 开发者密码"
+
+#: includes/class-youem-admin.php:855
+msgid "ScreenScraper user (optional)"
+msgstr "ScreenScraper 用户（可选）"
+
+#: includes/class-youem-admin.php:856
+msgid "ScreenScraper password (optional)"
+msgstr "ScreenScraper 密码（可选）"
+
+#: includes/class-youem-admin.php:867
+msgid "Advanced"
+msgstr "高级"
+
+#: includes/class-youem-admin.php:870
+msgid "Cross-origin isolation (PSP)"
+msgstr "跨源隔离（PSP）"
+
+#: includes/class-youem-admin.php:875 includes/class-youem-settings.php:98
+msgid "Off"
+msgstr "关闭"
+
+#: includes/class-youem-admin.php:877
+msgid "The PSP core needs SharedArrayBuffer, which browsers enable only on HTTPS pages sent with COOP/COEP headers."
+msgstr "PSP 核心需要 SharedArrayBuffer，浏览器仅在带有 COOP/COEP 头的 HTTPS 页面上启用它。"
+
+#: includes/class-youem-admin.php:881
+msgid "Emulator files"
+msgstr "模拟器文件"
+
+#: includes/class-youem-admin.php:882
+msgid "Load EmulatorJS from cdn.emulatorjs.org instead of the plugin folder"
+msgstr "从 cdn.emulatorjs.org 加载 EmulatorJS，而不是插件文件夹"
+
+#: includes/class-youem-admin.php:885
+msgid "Uninstall"
+msgstr "卸载"
+
+#: includes/class-youem-admin.php:886
+msgid "Delete all games, ROMs, BIOS and saves when the plugin is deleted"
+msgstr "删除插件时删除所有游戏、ROM、BIOS 和存档"
+
+#: includes/class-youem-admin.php:909
+msgid "Retro game library for WordPress powered by EmulatorJS."
+msgstr "基于 EmulatorJS 的 WordPress 复古游戏库。"
+
+#: includes/class-youem-admin.php:911
+msgid "Author"
+msgstr "作者"
+
+#: includes/class-youem-admin.php:912
+msgid "Sergey Gorshkov"
+msgstr "Sergey Gorshkov"
+
+#: includes/class-youem-admin.php:918
+msgid "The emulator is EmulatorJS, distributed under the GNU General Public License v3.0. Cores are libretro projects under their own licenses."
+msgstr "模拟器为 EmulatorJS，依据 GNU 通用公共许可证 v3.0 发布。核心为 libretro 项目，各自遵循其许可证。"
+
+#: includes/class-youem-admin.php:922
+msgid "Bundled"
+msgstr "内置"
+
+#: includes/class-youem-admin.php:931
+msgid "How to use"
+msgstr "使用方法"
+
+#: includes/class-youem-admin.php:933
+msgid "Upload BIOS files for PS1 (and optionally GBA)."
+msgstr "上传 PS1 的 BIOS 文件（GBA 可选）。"
+
+#: includes/class-youem-admin.php:934
+msgid "Add games: title, console, ROM file, cover, genres and access."
+msgstr "添加游戏：名称、主机、ROM 文件、封面、类型和访问权限。"
+
+#: includes/class-youem-admin.php:935
+msgid "Put the [youem_library] shortcode or the \"Retro game library\" block on any page."
+msgstr "在任意页面放置 [youem_library] 短代码或“复古游戏库”区块。"
+
+#: includes/class-youem-admin.php:938
+msgid "Only upload games you have the right to distribute."
+msgstr "请仅上传您有权分发的游戏。"
+
+#. translators: 1: file name, 2: allowed names or extensions.
+#: includes/class-youem-bios.php:85
+#, php-format
+msgid "\"%1$s\" is not a known BIOS file for this system. Allowed: %2$s"
+msgstr "“%1$s”不是此主机已知的 BIOS 文件。允许：%2$s"
+
+#: includes/class-youem-bios.php:91
+msgid "BIOS file is too large."
+msgstr "BIOS 文件过大。"
+
+#: includes/class-youem-bios.php:96
+msgid "Could not store the BIOS file."
+msgstr "无法保存 BIOS 文件。"
+
+#: includes/class-youem-covers.php:27 includes/class-youem-upload.php:170
+msgid "Choose a console first."
+msgstr "请先选择主机。"
+
+#: includes/class-youem-covers.php:36
+msgid "Select a metadata provider and enter its API key in Settings."
+msgstr "请在设置中选择元数据源并输入其 API 密钥。"
+
+#. translators: %d: HTTP status code.
+#: includes/class-youem-covers.php:60
+#, php-format
+msgid "Metadata provider returned HTTP %d."
+msgstr "元数据源返回 HTTP %d。"
+
+#: includes/class-youem-covers.php:75
+msgid "Enter the TheGamesDB API key in Settings."
+msgstr "请在设置中输入 TheGamesDB API 密钥。"
+
+#: includes/class-youem-covers.php:93 includes/class-youem-covers.php:196
+msgid "Nothing found in the database."
+msgstr "数据库中未找到任何内容。"
+
+#: includes/class-youem-covers.php:164
+msgid "Enter ScreenScraper developer credentials in Settings."
+msgstr "请在设置中输入 ScreenScraper 开发者凭据。"
+
+#: includes/class-youem-game.php:38 includes/class-youem-game.php:41
+msgid "Games"
+msgstr "游戏"
+
+#: includes/class-youem-game.php:42 includes/class-youem-game.php:43
+msgid "Add game"
+msgstr "添加游戏"
+
+#: includes/class-youem-game.php:44
+msgid "Edit game"
+msgstr "编辑游戏"
+
+#: includes/class-youem-game.php:45
+msgid "New game"
+msgstr "新游戏"
+
+#: includes/class-youem-game.php:46
+msgid "View game"
+msgstr "查看游戏"
+
+#: includes/class-youem-game.php:47 includes/class-youem-public.php:229
+msgid "Search games"
+msgstr "搜索游戏"
+
+#: includes/class-youem-game.php:48
+msgid "No games found"
+msgstr "未找到游戏"
+
+#: includes/class-youem-game.php:49
+msgid "No games found in Trash"
+msgstr "回收站中未找到游戏"
+
+#: includes/class-youem-game.php:99 includes/class-youem-game.php:101 includes/class-youem-public.php:213
+msgid "Consoles"
+msgstr "主机"
+
+#: includes/class-youem-game.php:121 includes/class-youem-public.php:232
+msgid "Genre"
+msgstr "类型"
+
+#: includes/class-youem-game.php:123
+msgid "Add genre"
+msgstr "添加类型"
+
+#: includes/class-youem-game.php:195
+msgid "Action"
+msgstr "动作"
+
+#: includes/class-youem-game.php:195
+msgid "Racing"
+msgstr "竞速"
+
+#: includes/class-youem-game.php:195
+msgid "Platformer"
+msgstr "平台"
+
+#: includes/class-youem-game.php:195
+msgid "Fighting"
+msgstr "格斗"
+
+#: includes/class-youem-game.php:195
+msgid "Shooter"
+msgstr "射击"
+
+#: includes/class-youem-game.php:195
+msgid "Puzzle"
+msgstr "益智"
+
+#: includes/class-youem-game.php:195
+msgid "Sports"
+msgstr "体育"
+
+#: includes/class-youem-public.php:64 includes/class-youem-public.php:320 includes/class-youem-public.php:321 public/js/block.js:21
+msgid "Retro game library"
+msgstr "复古游戏库"
+
+#: includes/class-youem-public.php:140 includes/class-youem-settings.php:37
+msgid "Log in"
+msgstr "登录"
+
+#: includes/class-youem-public.php:142
+msgid "Sign up"
+msgstr "注册"
+
+#: includes/class-youem-public.php:189
+msgid "Your account is not allowed to play games."
+msgstr "您的账户不允许玩游戏。"
+
+#: includes/class-youem-public.php:215 public/js/block.js:9
+msgid "All"
+msgstr "全部"
+
+#: includes/class-youem-public.php:230
+msgid "Search games…"
+msgstr "搜索游戏…"
+
+#: includes/class-youem-public.php:234
+msgid "All genres"
+msgstr "所有类型"
+
+#: includes/class-youem-public.php:244
+msgid "No games found."
+msgstr "未找到游戏。"
+
+#: includes/class-youem-public.php:245
+msgid "Load more"
+msgstr "加载更多"
+
+#: includes/class-youem-public.php:272 includes/class-youem-public.php:273 includes/class-youem-themes.php:115
+msgid "Theme"
+msgstr "主题"
+
+#: includes/class-youem-public.php:445
+msgid "Back to library"
+msgstr "返回游戏库"
+
+#: includes/class-youem-public.php:448 includes/class-youem-public.php:462
+msgid "Save slots"
+msgstr "存档槽位"
+
+#: includes/class-youem-public.php:449
+msgid "Fullscreen (Shift+3)"
+msgstr "全屏（Shift+3）"
+
+#: includes/class-youem-public.php:456 includes/class-youem-rest.php:398
+msgid "ROM file is missing."
+msgstr "ROM 文件缺失。"
+
+#: includes/class-youem-public.php:458
+msgid "This system needs a BIOS. Ask the site administrator to upload it."
+msgstr "此主机需要 BIOS。请联系网站管理员上传。"
+
+#: includes/class-youem-public.php:469
+msgid "quick save"
+msgstr "快速存档"
+
+#: includes/class-youem-public.php:470
+msgid "quick load"
+msgstr "快速读档"
+
+#: includes/class-youem-public.php:471
+msgid "fullscreen"
+msgstr "全屏"
+
+#: includes/class-youem-public.php:472
+msgid "Gamepad: LB+RB+X save, LB+RB+B load, LB+RB+Y fullscreen"
+msgstr "手柄：LB+RB+X 存档，LB+RB+B 读档，LB+RB+Y 全屏"
+
+#: includes/class-youem-rest.php:272
+msgid "Log in to play."
+msgstr "登录后即可游玩。"
+
+#: includes/class-youem-rest.php:274
+msgid "You are not allowed to play."
+msgstr "您无权游玩。"
+
+#: includes/class-youem-rest.php:288
+msgid "Game not found."
+msgstr "未找到游戏。"
+
+#: includes/class-youem-rest.php:401
+msgid "Too many games opened at once. Close other games and try again in a few minutes."
+msgstr "同时打开的游戏过多。请关闭其他游戏，几分钟后再试。"
+
+#: includes/class-youem-rest.php:422
+msgid "BIOS is not uploaded for this system."
+msgstr "此主机的 BIOS 尚未上传。"
+
+#: includes/class-youem-rest.php:458 includes/class-youem-saves.php:98
+msgid "Empty save state."
+msgstr "存档为空。"
+
+#: includes/class-youem-rest.php:489 public/js/player.js:100
+msgid "This slot is empty."
+msgstr "此槽位为空。"
+
+#: includes/class-youem-rest.php:503
+msgid "No screenshot."
+msgstr "没有截图。"
+
+#: includes/class-youem-rest.php:548
+msgid "Unknown theme."
+msgstr "未知主题。"
+
+#: includes/class-youem-rest.php:562 includes/class-youem-upload.php:97
+msgid "Chunk upload failed."
+msgstr "分块上传失败。"
+
+#: includes/class-youem-rest.php:602 includes/class-youem-upload.php:167
+msgid "Unknown game."
+msgstr "未知游戏。"
+
+#: includes/class-youem-saves.php:95
+msgid "Invalid save slot."
+msgstr "无效的存档槽位。"
+
+#. translators: %d: seconds.
+#: includes/class-youem-saves.php:104
+#, php-format
+msgid "Please wait %d seconds between saves."
+msgstr "两次存档之间请等待 %d 秒。"
+
+#: includes/class-youem-saves.php:115
+msgid "Save storage quota exceeded. Delete old saves and try again."
+msgstr "存档存储配额已满。请删除旧存档后重试。"
+
+#: includes/class-youem-saves.php:125
+msgid "Could not write the save file."
+msgstr "无法写入存档文件。"
+
+#: includes/class-youem-saves.php:159
+msgid "Could not store the save state."
+msgstr "无法保存状态。"
+
+#: includes/class-youem-settings.php:36
+msgid "Retro games are waiting for you"
+msgstr "复古游戏等你来玩"
+
+#: includes/class-youem-settings.php:37
+msgid "The game library is available to registered users only. Sign up or log in to play NES, SNES, Sega Genesis, GBA, PlayStation, PSP and N64 games right in your browser, with saves synced to your profile."
+msgstr "游戏库仅对注册用户开放。注册或登录即可在浏览器中直接畅玩 NES、SNES、世嘉 Genesis、GBA、PlayStation、PSP 和 N64 游戏，存档同步到您的个人资料。"
+
+#: includes/class-youem-settings.php:37
+msgid "Get access"
+msgstr "获取访问权限"
+
+#: includes/class-youem-themes.php:36
+msgid "Neon"
+msgstr "霓虹"
+
+#: includes/class-youem-themes.php:37
+msgid "Retro cream"
+msgstr "复古奶油"
+
+#: includes/class-youem-themes.php:38
+msgid "Dark"
+msgstr "暗色"
+
+#: includes/class-youem-themes.php:118
+msgid "Site default"
+msgstr "网站默认"
+
+#: includes/class-youem-upload.php:94
+msgid "Invalid chunk parameters."
+msgstr "无效的分块参数。"
+
+#: includes/class-youem-upload.php:100
+msgid "Chunk is too large."
+msgstr "分块过大。"
+
+#: includes/class-youem-upload.php:107
+msgid "Could not store the chunk."
+msgstr "无法保存分块。"
+
+#: includes/class-youem-upload.php:122
+msgid "Invalid upload."
+msgstr "无效的上传。"
+
+#. translators: %d: chunk number.
+#: includes/class-youem-upload.php:129
+#, php-format
+msgid "Chunk %d is missing, resume the upload."
+msgstr "缺少第 %d 块，请继续上传。"
+
+#: includes/class-youem-upload.php:134
+msgid "The file is too large."
+msgstr "文件过大。"
+
+#: includes/class-youem-upload.php:140
+msgid "Could not assemble the file."
+msgstr "无法合并文件。"
+
+#: includes/class-youem-upload.php:146
+msgid "Could not read a chunk."
+msgstr "无法读取分块。"
+
+#: includes/class-youem-upload.php:173
+msgid "No files to assemble."
+msgstr "没有可合并的文件。"
+
+#. translators: %s: file name.
+#: includes/class-youem-upload.php:180
+#, php-format
+msgid "File type of \"%s\" is not supported for this console."
+msgstr "此主机不支持“%s”的文件类型。"
+
+#: includes/class-youem-upload.php:217
+msgid "Upload the .cue together with all its .bin tracks (select them all at once) or as a .zip."
+msgstr "请同时上传 .cue 及其所有 .bin 音轨（一次全部选择），或打包为 .zip。"
+
+#: includes/class-youem-upload.php:222
+msgid "Could not store the ROM."
+msgstr "无法保存 ROM。"
+
+#: includes/class-youem-upload.php:265
+msgid "A multi-file upload must contain exactly one .cue sheet."
+msgstr "多文件上传必须恰好包含一个 .cue 文件。"
+
+#. translators: %s: list of file names.
+#: includes/class-youem-upload.php:278
+#, php-format
+msgid "The cue sheet references missing files: %s"
+msgstr "cue 文件引用了缺失的文件：%s"
+
+#. translators: %s: file extension.
+#: includes/class-youem-validator.php:50
+#, php-format
+msgid "The file does not look like a valid .%s image (signature check failed)."
+msgstr "该文件看起来不是有效的 .%s 镜像（签名检查失败）。"
+
+#. translators: %s: extensions.
+#: admin/js/admin.js:52
+#, js-format
+msgid "Allowed: %s"
+msgstr "允许：%s"
+
+#: admin/js/admin.js:53 admin/js/admin.js:72
+msgid "Select a console first."
+msgstr "请先选择主机。"
+
+#. translators: %s: file name.
+#: admin/js/admin.js:82
+#, js-format
+msgid "File type is not allowed for this console: %s"
+msgstr "此主机不允许该文件类型：%s"
+
+#. translators: %s: file name.
+#: admin/js/admin.js:86
+#, js-format
+msgid "File is too large: %s"
+msgstr "文件过大：%s"
+
+#: admin/js/admin.js:109
+msgid "Checking and saving…"
+msgstr "正在检查并保存…"
+
+#: admin/js/admin.js:112
+msgid "Done."
+msgstr "完成。"
+
+#: admin/js/admin.js:186
+msgid "Enter the title and select a console first."
+msgstr "请先输入名称并选择主机。"
+
+#. translators: %s: game title.
+#: admin/js/admin.js:210
+#, js-format
+msgid "Found: %s. Reload the page to see new genres."
+msgstr "已找到：%s。重新加载页面以查看新类型。"
+
+#: public/js/block.js:38
+msgid "Library"
+msgstr "游戏库"
+
+#: public/js/block.js:40
+msgid "Initial console"
+msgstr "初始主机"
+
+#: public/js/block.js:46
+msgid "Games per page (0 = default)"
+msgstr "每页游戏数（0 = 默认）"
+
+#: public/js/library.js:72
+msgid "Close"
+msgstr "关闭"
+
+#. translators: %d: slot number.
+#: public/js/player.js:33
+#, js-format
+msgid "Slot %d"
+msgstr "槽位 %d"
+
+#: public/js/player.js:65 public/js/player.js:87
+msgid "Start the game first."
+msgstr "请先启动游戏。"
+
+#. translators: %s: slot name.
+#: public/js/player.js:76
+#, js-format
+msgid "Saved: %s"
+msgstr "已保存：%s"
+
+#: public/js/player.js:78
+msgid "Could not save."
+msgstr "无法保存。"
+
+#. translators: %s: slot name.
+#: public/js/player.js:98
+#, js-format
+msgid "Loaded: %s"
+msgstr "已读取：%s"
+
+#: public/js/player.js:107
+msgid "Delete this save?"
+msgstr "删除此存档？"
+
+#: public/js/player.js:144
+msgid "Empty"
+msgstr "空"
+
+#: public/js/player.js:157
+msgid "Save"
+msgstr "存档"
+
+#: public/js/player.js:158
+msgid "Load"
+msgstr "读档"
+
+#: public/js/player.js:178
+msgid "Fullscreen is not available."
+msgstr "全屏不可用。"
+
+#: public/js/player.js:203
+msgid "This system needs HTTPS and cross-origin isolation. Ask the site administrator."
+msgstr "此主机需要 HTTPS 和跨源隔离。请联系网站管理员。"

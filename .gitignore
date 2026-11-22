@@ -1,0 +1,11 @@
+/vendor/emulatorjs/data/cores/*.data
+/vendor/emulatorjs/data/cores/*.zip
+/tools/
+/build/
+/node_modules/
+/vendor/composer/
+/vendor/bin/
+/vendor/autoload.php
+/composer.lock
+.phpunit.result.cache
+*.zip

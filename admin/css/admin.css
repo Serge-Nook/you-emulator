@@ -1,0 +1,24 @@
+.youem-row { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; }
+.youem-drop { border: 2px dashed #8c8f94; border-radius: 8px; padding: 28px 16px; text-align: center; cursor: pointer; background: #f6f7f7; transition: border-color .15s, background .15s; }
+.youem-drop:hover, .youem-drop:focus, .youem-drop.is-over { border-color: #2271b1; background: #f0f6fc; outline: none; }
+.youem-drop.is-busy { opacity: .6; pointer-events: none; }
+.youem-drop__help { display: block; margin-top: 6px; color: #646970; }
+.youem-uploads { margin: 10px 0 0; }
+.youem-uploads li { display: flex; gap: 8px; align-items: center; }
+.youem-uploads progress { flex: 1; max-width: 320px; }
+.youem-error { color: #d63638; font-weight: 600; }
+.youem-cover__preview img { max-width: 100%; height: auto; border-radius: 4px; display: block; margin-bottom: 8px; }
+.youem-access__role { display: inline-block; margin: 0 10px 4px 0; }
+.youem-user-results, .youem-user-chips { margin: 6px 0; }
+.youem-user-chips li { display: inline-flex; align-items: center; gap: 4px; background: #f0f0f1; border-radius: 12px; padding: 2px 4px 2px 10px; margin: 0 4px 4px 0; }
+.youem-chip-remove { border: 0; background: none; cursor: pointer; font-size: 16px; line-height: 1; color: #787c82; }
+.youem-chip-remove:hover { color: #d63638; }
+.column-youem_cover { width: 48px; }
+.youem-thumb { width: 40px; height: 40px; object-fit: cover; border-radius: 4px; display: block; background: #dcdcde; }
+.youem-warn { color: #d63638; }
+.youem-card { background: #fff; border: 1px solid #c3c4c7; border-radius: 6px; padding: 4px 16px 16px; margin: 16px 0; max-width: 900px; }
+.youem-badge { font-size: 12px; font-weight: 500; border-radius: 10px; padding: 2px 8px; margin-left: 8px; background: #f0f0f1; vertical-align: middle; }
+.youem-badge.is-ok { background: #d1f0d6; color: #00450c; }
+.youem-badge.is-bad { background: #fcdcdc; color: #8a1f11; }
+.youem-bios-form { margin-top: 12px; display: flex; gap: 8px; align-items: center; }
+.youem-pad-btn, .youem-inline { display: inline-block; min-width: 72px; margin: 0 6px 6px 0; }

@@ -1,0 +1,30 @@
+.youem-theme-crt .youem, .youem.youem-theme-crt, .youem-theme-crt.youem-embed {
+	--youem-bg: #031105; --youem-surface: #06200b; --youem-surface-2: #0a2f12; --youem-text: #8dff9e; --youem-muted: #4fbf62;
+	--youem-accent: #39ff5a; --youem-accent-2: #ffb000; --youem-on-accent: #021004; --youem-border: rgba(57, 255, 90, .3);
+	--youem-glow: 0 0 10px rgba(57, 255, 90, .6); --youem-radius: 4px;
+	--youem-font: "VT323", "Courier New", ui-monospace, monospace; --youem-title-font: var(--youem-font);
+}
+.youem-theme-crt .youem-library, .youem.youem-theme-crt.youem-guest { position: relative; overflow: hidden; background: radial-gradient(ellipse at center, #062a0d 0%, var(--youem-bg) 75%); text-shadow: 0 0 4px rgba(57, 255, 90, .55); }
+.youem-theme-crt .youem-library::after, .youem.youem-theme-crt.youem-guest::after {
+	content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 2;
+	background: repeating-linear-gradient(0deg, rgba(0, 0, 0, .28) 0, rgba(0, 0, 0, .28) 1px, transparent 2px, transparent 3px);
+	animation: youem-crt-flicker .15s infinite alternate;
+}
+.youem-theme-crt .youem-library::before, .youem.youem-theme-crt.youem-guest::before {
+	content: ""; position: absolute; left: 0; right: 0; height: 80px; top: -80px; z-index: 2; pointer-events: none;
+	background: linear-gradient(transparent, rgba(57, 255, 90, .08), transparent); animation: youem-crt-roll 7s linear infinite;
+}
+.youem-theme-crt .youem-card__title, .youem-theme-crt .youem-tab { font-size: 18px; letter-spacing: .03em; }
+.youem-theme-crt .youem-card__cover img { filter: sepia(.4) hue-rotate(60deg) saturate(1.4) contrast(1.1); }
+.youem-theme-crt .youem-card:hover .youem-card__cover img { filter: none; }
+.youem-theme-crt .youem-stage::after {
+	content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 10;
+	background: repeating-linear-gradient(0deg, rgba(0, 0, 0, .18) 0, rgba(0, 0, 0, .18) 1px, transparent 2px, transparent 3px);
+	box-shadow: inset 0 0 80px rgba(0, 0, 0, .7);
+}
+@keyframes youem-crt-flicker { from { opacity: .85; } to { opacity: 1; } }
+@keyframes youem-crt-roll { to { top: 100%; } }
+@media (prefers-reduced-motion: reduce) {
+	.youem-theme-crt .youem-library::after, .youem-theme-crt .youem-library::before, .youem.youem-theme-crt.youem-guest::after, .youem.youem-theme-crt.youem-guest::before { animation: none !important; }
+	.youem-theme-crt .youem-library::before, .youem.youem-theme-crt.youem-guest::before { display: none; }
+}
