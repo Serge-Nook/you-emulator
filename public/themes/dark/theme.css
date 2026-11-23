@@ -1,0 +1,13 @@
+.youem-theme-dark .youem, .youem.youem-theme-dark, .youem-theme-dark.youem-embed {
+	--youem-bg: #0e0f12; --youem-surface: #17191e; --youem-surface-2: #22252c; --youem-text: #e7e9ee; --youem-muted: #8b919e;
+	--youem-accent: #7c9cff; --youem-accent-2: #b28cff; --youem-on-accent: #0e0f12; --youem-border: rgba(255, 255, 255, .07);
+	--youem-glow: 0 0 0 1px rgba(124, 156, 255, .5); --youem-radius: 12px;
+}
+.youem-theme-dark .youem-library { background: linear-gradient(180deg, #121318, var(--youem-bg)); }
+.youem-theme-dark .youem-card { animation: youem-dark-in .5s cubic-bezier(.2, .7, .2, 1) both; }
+.youem-theme-dark .youem-card:nth-child(4n+2) { animation-delay: .05s; }
+.youem-theme-dark .youem-card:nth-child(4n+3) { animation-delay: .1s; }
+.youem-theme-dark .youem-card:nth-child(4n) { animation-delay: .15s; }
+.youem-theme-dark .youem-guest__glow, .youem.youem-theme-dark .youem-guest__glow { opacity: .22; animation-duration: 40s; }
+@keyframes youem-dark-in { from { opacity: 0; transform: scale(.97); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .youem-theme-dark .youem * { animation: none !important; } }

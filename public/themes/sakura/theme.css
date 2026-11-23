@@ -1,0 +1,23 @@
+.youem-theme-sakura .youem, .youem.youem-theme-sakura, .youem-theme-sakura.youem-embed {
+	--youem-bg: #fff5f8; --youem-surface: #ffffff; --youem-surface-2: #fde4ec; --youem-text: #4a2433; --youem-muted: #96707f;
+	--youem-accent: #d6336c; --youem-accent-2: #7d9d5a; --youem-on-accent: #ffffff; --youem-border: rgba(214, 51, 108, .18);
+	--youem-shadow: 0 6px 20px rgba(214, 51, 108, .12); --youem-glow: 0 0 0 3px rgba(214, 51, 108, .25); --youem-radius: 16px;
+	--youem-title-font: "M PLUS Rounded 1c", "Nunito", "Segoe UI", system-ui, sans-serif;
+}
+.youem-theme-sakura .youem-library, .youem.youem-theme-sakura.youem-guest {
+	position: relative; overflow: hidden;
+	background: radial-gradient(600px 300px at 90% 0, rgba(255, 183, 197, .45), transparent 70%), var(--youem-bg);
+}
+.youem-theme-sakura .youem-library::before, .youem.youem-theme-sakura.youem-guest::before {
+	content: ""; position: absolute; inset: -100px 0 0; pointer-events: none; z-index: 0; opacity: .55;
+	background-image: radial-gradient(ellipse 6px 4px at 20px 30px, #ffb7c5 60%, transparent 62%), radial-gradient(ellipse 5px 3px at 120px 80px, #ffc9d4 60%, transparent 62%), radial-gradient(ellipse 4px 3px at 70px 150px, #f7a1b5 60%, transparent 62%);
+	background-size: 180px 200px; animation: youem-sakura-fall 16s linear infinite;
+}
+.youem-theme-sakura .youem-library > *, .youem.youem-theme-sakura.youem-guest > * { position: relative; z-index: 1; }
+.youem-theme-sakura .youem-card { box-shadow: var(--youem-shadow); }
+.youem-theme-sakura .youem-card:hover { border-color: var(--youem-accent); transform: rotate(-.6deg) translateY(-2px); }
+.youem-theme-sakura .youem-tab[aria-selected="true"] { border-radius: 999px; }
+.youem-theme-sakura .youem-guest__title, .youem.youem-theme-sakura .youem-guest__title { color: var(--youem-accent); }
+.youem-theme-sakura .youem-stage { box-shadow: 0 0 0 1px var(--youem-border), 0 18px 40px rgba(214, 51, 108, .18); }
+@keyframes youem-sakura-fall { to { background-position: 60px 200px, -40px 200px, 30px 200px; } }
+@media (prefers-reduced-motion: reduce) { .youem-theme-sakura .youem-library::before, .youem.youem-theme-sakura.youem-guest::before, .youem-theme-sakura .youem * { animation: none !important; } .youem-theme-sakura .youem-card:hover { transform: none; } }

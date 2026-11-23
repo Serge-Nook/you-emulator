@@ -1,0 +1,39 @@
+.youem-library { padding: 20px; border-radius: var(--youem-radius); background: var(--youem-bg); margin: 16px 0; }
+.youem-library__bar { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.youem-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.youem-tab {
+	border: 1px solid var(--youem-border); background: var(--youem-surface); color: var(--youem-muted);
+	border-radius: 999px; padding: 8px 14px; font: 600 14px var(--youem-font); cursor: pointer; transition: all .2s;
+}
+.youem-tab:hover { color: var(--youem-text); }
+.youem-tab[aria-selected="true"] { background: var(--youem-accent); color: var(--youem-on-accent, #fff); border-color: transparent; box-shadow: var(--youem-glow); }
+.youem-tab__count { opacity: .7; font-weight: 400; margin-left: 2px; }
+.youem-library__filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.youem-search { min-width: 200px; }
+.youem-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(46%, 180px), 1fr)); gap: 18px; min-height: 120px; transition: opacity .2s; }
+.youem-library.is-loading .youem-grid { opacity: .55; }
+.youem-card {
+	display: flex; flex-direction: column; border-radius: var(--youem-radius); overflow: hidden; text-decoration: none;
+	background: var(--youem-surface); border: 1px solid var(--youem-border); color: var(--youem-text);
+	transition: transform .25s, box-shadow .25s, border-color .25s; animation: youem-fade-up .4s both;
+}
+.youem-card:hover { transform: translateY(-4px); box-shadow: var(--youem-shadow), var(--youem-glow); border-color: var(--youem-accent); color: var(--youem-text); }
+.youem-card__cover { position: relative; aspect-ratio: 3 / 4; background: var(--youem-surface-2); overflow: hidden; }
+.youem-card__cover img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
+.youem-card:hover .youem-card__cover img { transform: scale(1.05); }
+.youem-card__placeholder { position: absolute; inset: 0; display: grid; place-items: center; font: 800 64px var(--youem-title-font); color: var(--youem-accent); opacity: .5; }
+.youem-card__cover .youem-badge { position: absolute; top: 8px; left: 8px; }
+.youem-card__play {
+	position: absolute; right: 10px; bottom: 10px; width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center;
+	background: var(--youem-accent); color: var(--youem-on-accent, #fff); opacity: 0; transform: scale(.8); transition: all .25s; box-shadow: var(--youem-glow);
+}
+.youem-card:hover .youem-card__play, .youem-card:focus-visible .youem-card__play { opacity: 1; transform: none; }
+.youem-card__body { padding: 10px 12px 14px; }
+.youem-card__title { margin: 0; font: 700 15px/1.3 var(--youem-title-font); color: var(--youem-text); }
+.youem-card__meta { margin: 4px 0 0; font-size: 12px; color: var(--youem-muted); }
+.youem-empty { text-align: center; color: var(--youem-muted); padding: 32px 0; }
+.youem-more-wrap { text-align: center; margin-top: 20px; }
+.youem-modal-open { overflow: hidden; }
+.youem-modal { position: fixed; inset: 0; z-index: 100000; background: rgba(0, 0, 0, .85); display: flex; align-items: center; justify-content: center; padding: 3vh 3vw; animation: youem-fade-up .25s both; }
+.youem-modal__frame { width: min(1200px, 100%); height: min(860px, 100%); border: 0; border-radius: var(--youem-radius); background: #000; }
+.youem-modal__close { position: absolute; top: 12px; right: 12px; z-index: 1; }

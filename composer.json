@@ -1,0 +1,25 @@
+{
+	"name": "serge-nook/you-emulator",
+	"description": "Private retro game library for WordPress powered by EmulatorJS.",
+	"type": "wordpress-plugin",
+	"license": "GPL-3.0-or-later",
+	"require": {
+		"php": ">=8.1"
+	},
+	"require-dev": {
+		"10up/wp_mock": "^1.0",
+		"phpunit/phpunit": "^9.6",
+		"wp-coding-standards/wpcs": "^3.1",
+		"phpcompatibility/phpcompatibility-wp": "^2.1"
+	},
+	"config": {
+		"vendor-dir": "tools/vendor",
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	},
+	"scripts": {
+		"test": "phpunit",
+		"lint": "phpcs"
+	}
+}

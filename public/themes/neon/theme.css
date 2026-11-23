@@ -1,0 +1,17 @@
+.youem-theme-neon .youem, .youem.youem-theme-neon, .youem-theme-neon.youem-embed {
+	--youem-bg: #0a0618; --youem-surface: #140c2e; --youem-surface-2: #1f1442; --youem-text: #f3eaff; --youem-muted: #a99bd0;
+	--youem-accent: #ff2bd6; --youem-accent-2: #00f0ff; --youem-on-accent: #0a0618; --youem-border: rgba(255, 43, 214, .28);
+	--youem-glow: 0 0 12px rgba(255, 43, 214, .7), 0 0 28px rgba(0, 240, 255, .35);
+	--youem-title-font: "Orbitron", "Segoe UI", system-ui, sans-serif;
+}
+.youem-theme-neon .youem-library, .youem.youem-theme-neon.youem-guest {
+	background: radial-gradient(1200px 500px at 10% -10%, rgba(255, 43, 214, .18), transparent 60%), radial-gradient(900px 500px at 110% 110%, rgba(0, 240, 255, .14), transparent 60%), var(--youem-bg);
+}
+.youem-theme-neon .youem-guest__title, .youem.youem-theme-neon .youem-guest__title { text-shadow: 0 0 8px var(--youem-accent), 0 0 24px var(--youem-accent-2); animation: youem-neon-flicker 6s infinite; }
+.youem-theme-neon .youem-tab[aria-selected="true"] { animation: youem-neon-pulse 2.4s ease-in-out infinite; }
+.youem-theme-neon .youem-card:hover { border-color: var(--youem-accent-2); }
+.youem-theme-neon .youem-stage { box-shadow: 0 0 0 1px var(--youem-accent), 0 0 30px rgba(255, 43, 214, .35); animation: youem-neon-border 8s linear infinite; }
+@keyframes youem-neon-pulse { 50% { box-shadow: 0 0 4px rgba(255, 43, 214, .5), 0 0 18px rgba(0, 240, 255, .6); } }
+@keyframes youem-neon-flicker { 0%, 92%, 100% { opacity: 1; } 93% { opacity: .55; } 95% { opacity: 1; } 96% { opacity: .7; } }
+@keyframes youem-neon-border { 0%, 100% { box-shadow: 0 0 0 1px #ff2bd6, 0 0 30px rgba(255, 43, 214, .35); } 50% { box-shadow: 0 0 0 1px #00f0ff, 0 0 30px rgba(0, 240, 255, .35); } }
+@media (prefers-reduced-motion: reduce) { .youem-theme-neon .youem *, .youem-theme-neon .youem-stage { animation: none !important; } }

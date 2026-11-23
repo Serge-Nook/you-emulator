@@ -1,0 +1,78 @@
+.youem {
+	--youem-bg: #10121a;
+	--youem-surface: #1a1d29;
+	--youem-surface-2: #242838;
+	--youem-text: #eef0f8;
+	--youem-muted: #9aa0b4;
+	--youem-accent: #5b8cff;
+	--youem-accent-2: #ff5bd2;
+	--youem-border: rgba(255, 255, 255, .08);
+	--youem-radius: 14px;
+	--youem-font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+	--youem-title-font: var(--youem-font);
+	--youem-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+	--youem-glow: none;
+	--youem-anim: 1;
+	box-sizing: border-box;
+	color: var(--youem-text);
+	font-family: var(--youem-font);
+	line-height: 1.45;
+}
+.youem *, .youem *::before, .youem *::after { box-sizing: inherit; }
+.youem [hidden] { display: none !important; }
+.youem-sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.youem-btn {
+	display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+	min-height: 40px; padding: 8px 18px; border-radius: calc(var(--youem-radius) * .7);
+	border: 1px solid var(--youem-border); background: var(--youem-surface-2); color: var(--youem-text);
+	font: 600 15px/1.2 var(--youem-font); text-decoration: none; cursor: pointer;
+	transition: transform .15s, box-shadow .2s, background .2s, color .2s;
+}
+.youem-btn:hover { transform: translateY(-1px); box-shadow: var(--youem-glow); color: var(--youem-text); }
+.youem-btn:focus-visible, .youem-icon-btn:focus-visible, .youem-tab:focus-visible, .youem-card:focus-visible, .youem-input:focus-visible { outline: 2px solid var(--youem-accent); outline-offset: 2px; }
+.youem-btn:disabled { opacity: .45; cursor: not-allowed; transform: none; box-shadow: none; }
+.youem-btn--primary { background: var(--youem-accent); border-color: transparent; color: var(--youem-on-accent, #fff); }
+.youem-btn--primary:hover { color: var(--youem-on-accent, #fff); }
+.youem-btn--ghost { background: transparent; }
+.youem-btn--sm { min-height: 30px; padding: 4px 10px; font-size: 13px; }
+.youem-icon-btn {
+	display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px;
+	border-radius: 50%; border: 1px solid var(--youem-border); background: rgba(0, 0, 0, .35); color: var(--youem-text);
+	font-size: 18px; cursor: pointer; text-decoration: none; transition: background .2s, box-shadow .2s;
+}
+.youem-icon-btn:hover { background: var(--youem-accent); color: var(--youem-on-accent, #fff); box-shadow: var(--youem-glow); }
+.youem-input {
+	min-height: 40px; padding: 8px 12px; border-radius: calc(var(--youem-radius) * .6);
+	border: 1px solid var(--youem-border); background: var(--youem-surface); color: var(--youem-text); font: 15px var(--youem-font);
+}
+.youem-badge {
+	display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: .04em;
+	text-transform: uppercase; background: var(--youem-accent); color: var(--youem-on-accent, #fff);
+}
+
+/* Guest banner */
+.youem-guest {
+	position: relative; overflow: hidden; text-align: center; padding: clamp(32px, 6vw, 72px) 24px;
+	border-radius: var(--youem-radius); background: var(--youem-bg); border: 1px solid var(--youem-border); box-shadow: var(--youem-shadow);
+	margin: 24px 0;
+}
+.youem-guest__glow {
+	position: absolute; inset: -40%; pointer-events: none; opacity: .5;
+	background: conic-gradient(from 0deg, transparent, var(--youem-accent), transparent 30%, var(--youem-accent-2), transparent 60%);
+	filter: blur(60px); animation: youem-spin 18s linear infinite;
+}
+.youem-guest > :not(.youem-guest__glow) { position: relative; }
+.youem-guest__title { margin: 0 0 12px; font: 800 clamp(26px, 4vw, 42px)/1.15 var(--youem-title-font); color: var(--youem-text); }
+.youem-guest__text { max-width: 640px; margin: 0 auto 24px; color: var(--youem-muted); font-size: 17px; }
+.youem-guest__actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.youem-notice { padding: 16px; border-radius: var(--youem-radius); background: var(--youem-surface); }
+
+@keyframes youem-spin { to { transform: rotate(360deg); } }
+@keyframes youem-fade-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+	.youem *, .youem *::before, .youem *::after, .youem::before, .youem::after {
+		animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important;
+	}
+	.youem-guest__glow { animation: none; }
+}
