@@ -231,8 +231,9 @@
 	}
 	window.EJS_defaultOptions = { shader: P.shader };
 	window.EJS_Buttons = { fullscreen: false, exitEmulation: false, gamepad: false };
+	window.EJS_controlScheme = P.console;
 	if ( P.controls ) {
-		window.EJS_defaultControls = P.controls;
+		window.EJS_defaultControls = JSON.parse( JSON.stringify( P.controls ) );
 	}
 	window.EJS_onGameStart = () => {
 		started = true;
